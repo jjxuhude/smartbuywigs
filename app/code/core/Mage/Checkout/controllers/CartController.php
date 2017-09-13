@@ -207,12 +207,22 @@ class Mage_Checkout_CartController extends Mage_Core_Controller_Front_Action
      */
     public function addAction()
     {
+
+
         if (!$this->_validateFormKey()) {
             $this->_goBack();
             return;
         }
+
+
+
         $cart   = $this->_getCart();
         $params = $this->getRequest()->getParams();
+        if(isset($params['ajax'])){
+            sleep(10);
+            $this->ajaxAdd();
+            return ;
+        }
         try {
             if (isset($params['qty'])) {
                 $filter = new Zend_Filter_LocalizedToNormalized(
@@ -708,5 +718,60 @@ class Mage_Checkout_CartController extends Mage_Core_Controller_Front_Action
 
         $this->getResponse()->setHeader('Content-type', 'application/json');
         $this->getResponse()->setBody(Mage::helper('core')->jsonEncode($result));
+    }
+
+    function ajaxAdd(){
+
+        $cart   = $this->_getCart();
+        $params = $this->getRequest()->getParams();
+        try {
+            if (isset($params['qty'])) {
+                $filter = new Zend_Filter_LocalizedToNormalized(
+                    array('locale' => Mage::app()->getLocale()->getLocaleCode())
+                );
+                $params['qty'] = $filter->filter($params['qty']);
+            }
+
+            $product = $this->_initProduct();
+            $cart->addProduct($product, $params);
+            $cart->save();
+
+            $this->_getSession()->setCartWasUpdated(true);
+
+            $message = $this->__('One product has been added into your shopping cart');
+            $response['status'] = true;
+            $response['message'] = $message;
+            $response['cart_qty'] = $cart->getItemsQty();
+            $sidebar = $this->getLayout()->createBlock('checkout/cart_sidebar')->setTemplate('checkout/cart/sidebar.phtml')->toHtml();
+            $response['sidebar'] = $sidebar;
+            $productInfo['name']=$product->getName();
+            $qty=$params['qty']?$params['qty']:1;
+            $productInfo['qty']=__('Quantity:')." ".$qty;
+            $productInfo['total']=Mage::helper('checkout')->convertPrice(($params['qty']?$params['qty']:1)*$product->getFinalPrice());
+            $productInfo['img']=Mage::helper('catalog/image')->init($product, 'image')->resize(150)->__toString();
+            $response['productInfo']=$productInfo;
+
+
+        } catch (Mage_Core_Exception $e) {
+            $msg = "";
+            if ($this->_getSession()->getUseNotice(true)) {
+                $msg = $e->getMessage();
+            } else {
+                $messages = array_unique(explode("\n", $e->getMessage()));
+                foreach ($messages as $message) {
+                    $msg .= $message.'<br/>';
+                }
+            }
+
+            $response['status'] = false;
+            $response['message'] = $msg;
+        } catch (Exception $e) {
+            $response['status'] = false;
+            $response['message'] = $this->__('Cannot add the item to shopping cart.');
+            //  dump($e->getMessage());
+            Mage::logException($e);
+        }
+        $this->getResponse()->setBody(Mage::helper('core')->jsonEncode($response));
+        return;
     }
 }

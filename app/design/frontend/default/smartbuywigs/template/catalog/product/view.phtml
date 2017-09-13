@@ -115,7 +115,29 @@
                 }
                 var e = null;
                 try {
-                    this.form.submit();
+                    //this.form.submit();
+                    button.disabled = true;
+                    jQuery.post(form.action+"?ajax=1",jQuery(this.form).serialize(),function(response){
+                        button.disabled = false;
+                        if(response.status == true){
+                            var tital= 'Checkout Add Success';
+                            var content='<div>' +
+                                '<div class="message">message:'+response.message+'</div>' +
+                                '<div class="name">name:'+response.productInfo.name+'</div>' +
+                                '<div class="img"><img src="'+response.productInfo.img+'"></div>' +
+                                '<div class="total">total:'+response.productInfo.total+'</div>' +
+                                '<div class="qty">qty:'+response.productInfo.qty+'</div>' +
+                                '<div class="cart_qty">qty:'+response.cart_qty+'</div>' +
+                                '</div>';
+                            var buttons='<button type="button" class="btn btn-default" data-dismiss="modal">Continue Shopping</button>' +
+                                '<a href="<?php echo $this->getUrl('checkout/cart')?>" class="btn btn-primary">View Cart</a>';
+
+                            jQuery('.modal .modal-title').html(tital);
+                            jQuery('.modal .modal-body').html(content);
+                            jQuery('.modal .modal-footer').html(buttons);
+                            jQuery('.modal').modal({backdrop: 'static', keyboard: false});
+                        }
+                    },'json');
                 } catch (e) {
                 }
                 this.form.action = oldUrl;
@@ -123,9 +145,7 @@
                     throw e;
                 }
 
-                if (button && button != 'undefined') {
-                    button.disabled = true;
-                }
+
             }
         }.bind(productAddToCartForm);
 

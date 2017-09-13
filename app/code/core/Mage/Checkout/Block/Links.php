@@ -51,9 +51,9 @@ class Mage_Checkout_Block_Links extends Mage_Core_Block_Template
             } else {
                 $text = $this->__('My Cart');
             }
-
+            $text1 ='<div class="loading hidden"><img src="'.$this->getSkinUrl('images/opc-ajax-loader.gif').'" /></div>'.$text;
             $parentBlock->removeLinkByUrl($this->getUrl('checkout/cart'));
-            $parentBlock->addLink($text, 'checkout/cart', $text, true, array(), 50, null, 'class="top-link-cart"');
+            $parentBlock->addLink($text1, 'checkout/cart', $text, true, array(), 50, null, 'class="top-link-cart"');
         }
         return $this;
     }
