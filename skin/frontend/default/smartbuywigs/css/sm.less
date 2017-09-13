@@ -1,22 +1,76 @@
-@import "variable.less";@import "variable.less";
-#header{
+@import "variable.less";
+@import "variable.less";
 
+#mask {
+  position   : fixed;
+  z-index    : @z-index-modal;
+  left       : 0;
+  top        : 0;
+  width      : 30%;
+  height     : 100%;
+  background : rgba(0, 0, 0, 0.3);
 }
 
-#footer{
+.header-top {
+  .login-menu {
+    float : right;
+  }
+  .sjdown {
+    display             : inline-block;
+    width               : 0;
+    height              : 0;
+    border              : 7px solid;
+    border-top-color    : #fff;
+    border-bottom-color : transparent;
+    border-left-color   : transparent;
+    border-right-color  : transparent;
+    position            : relative;
+    top                 : 7px;
+  }
 
-}
+  @media only screen and (max-width:992px)  {
+    li{box-shadow: none !important;}
+  }
+  .dropdown {
+    &:hover{
+      .login-menu1{display: block !important;}
+    }
+    position : relative;
+    .login-menu1 {
+      padding:10px 5px;
+      &::before {
+        content             : "";
+        display             : block;
+        width               : 0;
+        height              : 0;
+        border              : 7px solid;
+        border-top-color    : transparent;
+        border-bottom-color : #fff;
+        border-left-color   : transparent;
+        border-right-color  : transparent;
+        position: absolute;
+        top: -14px;
+        right: 9px;
+      }
+      position   : absolute;
+      left       : -56px;
+      top        : 42px;
+      background : #fff;
+      li {
+        box-shadow : none;
+      }
+      a {
+        color        : #777;
+        display      : block;
+        font-size    : 14px;
+        width        : 140px;
+        padding-left : 7px;
+      }
+      border     : 1px solid #ccc;
+      li {
+        padding : 5px 20px 5px 5px;
+      }
+    }
+  }
 
-#main-content{
-
-}
-
-#mask{
-  position:fixed;
-  z-index:@z-index-modal;
-  left:0;
-  top:0;
-  width:30%;
-  height:100%;
-  background: rgba(0,0,0,0.3);
 }

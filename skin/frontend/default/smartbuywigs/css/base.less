@@ -1,44 +1,30 @@
 @import "variable.less";
-#header{
-
+.header-top{
+  height: 50px;
+  background: #079cb4;
+  .down-text{
+    line-height: 50px;
+    animation-duration: 1s;
+  }
+  .login-menu{
+    li{
+      float: left;
+      padding: 15px  10px 5px 10px;
+      font-size: 13px;
+      font-family: 'futura-pt';
+      a {
+        color: #fff;
+        strong{
+          font-weight: 700;
+        }
+      }
+    }
+    >li + li{
+      box-shadow: -8px 7px 0px -7px rgba(255,255,255,.375);
+      padding-left: 10px;
+    }
+  }
 }
 
-#footer{
-
-}
-
-#main-content{
-
-}
-
-//模态
-#mask{
-  position:fixed;
-  z-index:@z-index-modal;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  background: rgba(0,0,0,0.3);
-}
-
-.modal-dialog{
-  margin:0 auto;
-}
-.modal-table{
-  display: table;
-  width: 100%;
-  height: 100%;
-}
-
-.modal-cell{
-  display: table-cell;
-  vertical-align: middle;
-}
-
-//loading
-.loading{
-  display: inline-block;
-}
 
 

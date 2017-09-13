@@ -29,16 +29,62 @@
 ?>
 <div class="header-container">
     <div class="header">
-        <?php if ($this->getIsHomePage()):?>
-        <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
-        <?php else:?>
-        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
-        <?php endif?>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-7">
+                        <a href="" class=" down-text ">
+                            <div class="animated  fadeInDown">
+                                <span style="color: #ffffff; text-decoration: none;"><strong>Save 25%</strong> on <strong>La Roche-Posay</strong> with <strong>LRP25</strong> at checkout.* <span
+                                            style="text-transform: uppercase; text-decoration: underline; color: #ffffff;">SHOP NOW</span> <span
+                                            style="font-size: 10px; color: #ffffff; text-decoration: none;"> *Sale ends 9/17. </span> </span>
+                            </div>
+                        </a>
+                        <a href="" class="  down-text  hidden">
+                            <div class="animated  fadeInDown">
+                                <span style="color: #ffffff; text-decoration: none;"><strong>Save 20%</strong> on <em>jane iredale</em> with <strong>JANE20</strong> at checkout. <span
+                                            style="text-transform: uppercase; text-decoration: underline; color: #ffffff;">SHOP SALE</span></span>
+                            </div>
+                        </a>
+                        <script type="text/javascript">
+                            setInterval (function () {
+                                jQuery ('.down-text').toggleClass ('hidden');
+                            }, 5000);
+                        </script>
+                    </div>
+                    <div class="col-xs-2 col-sm-4 col-md-5">
+                        <ul  class="login-menu  hidden-xs">
+                            <li class="hidden-xs hidden-sm">
+                                <a href="">
+                                    <strong style="
+                                    text-transform: uppercase;
+                                    letter-spacing: .1em;
+                                    text-decoration: underline;
+                                ">Earn Rewards</strong>
+                                </a>
+                            </li>
+                            <li class="dropdown hidden-xs">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In / Sign Up
+                                <i class="sjdown"></i></a>
+                                <i class="sjup"></i></a>
+                                <ul class="login-menu1 hidden">
+                                    <li><a href="">Log In / Sign Up</a></li>
+                                    <li><a href="">Track Order</a></li>
+                                    <li><a href="">Easy Returns</a></li>
+                                    <li><a href="">Order History</a></li>
+                                    <li><a href="">My Favorites</a></li>
+                                    <li><a href="">Dermstore Subscriptions</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="quick-access">
-            <?php echo $this->getChildHtml('topSearch') ?>
-            <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
-            <?php echo $this->getChildHtml('topLinks') ?>
-            <?php echo $this->getChildHtml('store_language') ?>
+
+
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
