@@ -62,16 +62,15 @@ ul {
   display: inline-block;
 }
 .header-top {
-  height: 50px;
+  min-height: 50px;
   background: #079cb4;
 }
 .header-top .down-text {
-  line-height: 50px;
   animation-duration: 1s;
 }
 .header-top .login-menu li {
   float: left;
-  padding: 15px  10px 5px 10px;
+  padding: 15px 10px 5px 10px;
   font-size: 13px;
   font-family: 'futura-pt';
 }

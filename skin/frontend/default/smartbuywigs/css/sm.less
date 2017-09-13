@@ -15,6 +15,9 @@
   .login-menu {
     float : right;
   }
+  .down-text {
+    line-height : 50px;
+  }
   .sjdown {
     display             : inline-block;
     width               : 0;
@@ -28,16 +31,20 @@
     top                 : 7px;
   }
 
-  @media only screen and (max-width:992px)  {
-    li{box-shadow: none !important;}
+  @media only screen and (max-width : 992px) {
+    li {
+      box-shadow : none !important;
+    }
   }
   .dropdown {
-    &:hover{
-      .login-menu1{display: block !important;}
+    &:hover {
+      .login-menu1 {
+        display : block !important;
+      }
     }
     position : relative;
     .login-menu1 {
-      padding:10px 5px;
+      padding    : 10px 5px;
       &::before {
         content             : "";
         display             : block;
@@ -48,9 +55,9 @@
         border-bottom-color : #fff;
         border-left-color   : transparent;
         border-right-color  : transparent;
-        position: absolute;
-        top: -14px;
-        right: 9px;
+        position            : absolute;
+        top                 : -14px;
+        right               : 9px;
       }
       position   : absolute;
       left       : -56px;

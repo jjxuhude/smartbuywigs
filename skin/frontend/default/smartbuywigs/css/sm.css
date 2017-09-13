@@ -73,6 +73,9 @@ ul {
 .header-top .login-menu {
   float: right;
 }
+.header-top .down-text {
+  line-height: 50px;
+}
 .header-top .sjdown {
   display: inline-block;
   width: 0;
