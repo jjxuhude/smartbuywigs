@@ -48,7 +48,7 @@
                         </a>
                         <script type="text/javascript">
                             setInterval (function () {
-                               // jQuery ('.down-text').toggleClass ('hidden');
+                                jQuery ('.down-text').toggleClass ('hidden');
                             }, 5000);
                         </script>
                     </div>
@@ -88,5 +88,27 @@
         </div>
         <?php echo $this->getChildHtml('topContainer'); ?>
     </div>
+    <div class="mobile-nav ">
+        <div class="container">
+            <div class="row">
+                <div class="btns">
+                    <div class="menu iconfont icon-menu icon-menu col-xs-2 hidden-lg hidden-md"></div>
+                    <div class="logo col-xs-8 text-center">smartbuywigs</div>
+                    <div class="checkout iconfont icon-gouwuche col-xs-2 col-md-4">
+                        <i>0</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search search-block">
+        <div class="container">
+            <div class="row">
+                <div class="search"> <?php echo $this->getChildHtml('topSearch') ?></div>
+            </div>
+        </div>
+    </div>
 </div>
+
 <?php echo $this->getChildHtml('topMenu') ?>

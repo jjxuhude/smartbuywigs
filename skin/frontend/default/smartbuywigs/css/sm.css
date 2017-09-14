@@ -37,6 +37,10 @@ ul {
   list-style: none;
   padding: 0;
 }
+p {
+  padding: 0;
+  margin: 0;
+}
 #mask {
   position: fixed;
   z-index: 100;
@@ -133,4 +137,49 @@ ul {
 }
 .header-top .dropdown .login-menu1 li {
   padding: 5px 20px 5px 5px;
+}
+.home-banner {
+  min-height: 320px;
+}
+.home-banner .texts {
+  flex: 1;
+}
+.home-banner .texts .txt1 {
+  font-size: 36px;
+}
+.home-banner .texts .txt1 p {
+  text-align: right;
+  padding-right: 20% ;
+}
+.home-banner .texts .txt1 p + p {
+  font-size: 58px !important;
+  padding-right: 16% ;
+}
+.home-banner .texts .txt2 {
+  font-size: 18px;
+  font-style: italic;
+  width: 60%;
+  text-align: left;
+  float: right;
+  padding-right: 20px;
+  text-indent: 16%;
+}
+.home-banner .nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.home-banner .nav ul {
+  width: 35%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  transform: translate(160px, -20px);
+}
+.home-banner .nav ul li {
+  background: #fff;
+  padding: 10px 20px;
+  width: 40%;
+  margin-top: 10px;
+  text-align: center;
 }
