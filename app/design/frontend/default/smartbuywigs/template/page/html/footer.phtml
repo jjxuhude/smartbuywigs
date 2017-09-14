@@ -31,10 +31,10 @@
             <div class="row">
                 <dl class="wrap">
                     <dt>
-                        <ul>
+                        <ul class="items">
                             <li>
                                 <dl>
-                                    <dt>Company</dt>
+                                    <dt><a>Company<i class="iconfont icon-add""></i></a></dt>
                                     <dd><a>About Us</a></dd>
                                     <dd><a>Dermstore Spa</a></dd>
                                     <dd><a>Testimonials</a></dd>
@@ -46,7 +46,7 @@
                             </li>
                         <li>
                             <dl>
-                                <dt>Customer Service</dt>
+                                <dt><a>Customer Service<i class="iconfont icon-add""></i></a></dt>
                                 <dd><a>Customer Service</a></dd>
                                 <dd><a>FAQs</a></dd>
                                 <dd><a>About Rewards</a></dd>
@@ -57,7 +57,7 @@
                         </li>
                         <li>
                             <dl>
-                                <dt>My Account</dt>
+                                <dt><a>My Account<i class="iconfont icon-add""></i></a></dt>
                                 <dd><a>Dermstore Subscriptions</a></dd>
                                 <dd><a>My Rewards</a></dd>
                                 <dd><a>My Favorites</a></dd>
@@ -71,7 +71,7 @@
 
                         </ul>
                     </dt>
-                    <dd>
+                    <dd class="newsletter-wrap">
                        <h5>New Subscribers Receive 20% Off</h5>
                         <div class="newsletter">
                             <?php echo $this->getChildHtml('newsletter') ?>
@@ -94,6 +94,20 @@
     </div>
 </div>
 
+<script>
+    (function($){
+	    $('.items').on('click','.icon-add',function(){
+		    var dl=$(this).closest('dl');
+		    dl.find('dd').show();
+		    $(this).removeClass('icon-add').addClass('icon-div');
+	    })
+	    $('.items').on('click','.icon-div',function(){
+		    var dl=$(this).closest('dl');
+		    dl.find('dd').hide();
+		    $(this).removeClass('icon-div').addClass('icon-add');
+	    })
+    })(jQuery);
+</script>
 
 <div id="mask" class="hidden">
 
