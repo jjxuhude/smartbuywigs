@@ -167,11 +167,11 @@ img {
 }
 .home-banner .texts .txt1 p {
   text-align: right;
-  padding-right: 20% ;
+  padding-right: 20%;
 }
 .home-banner .texts .txt1 p + p {
   font-size: 58px !important;
-  padding-right: 16% ;
+  padding-right: 16%;
 }
 .home-banner .texts .txt2 {
   font-size: 18px;
@@ -200,4 +200,67 @@ img {
   width: 40%;
   margin-top: 10px;
   text-align: center;
+}
+.footer {
+  background-color: #E8EAE9;
+  padding-top: 40px;
+}
+.footer dt {
+  font-family: 'Martel';
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 15px;
+}
+.footer dd {
+  font-size: 14px;
+  font-family: 'futura-pt';
+}
+.footer dd a {
+  color: #333;
+  font-weight: 200;
+}
+.footer dl.wrap {
+  display: flex;
+  flex-direction: row;
+}
+.footer dl.wrap dt {
+  flex: 3;
+}
+.footer dl.wrap dt ul {
+  display: flex;
+  flex-flow: row;
+}
+.footer dl.wrap dt ul li {
+  flex: 1;
+  text-align: left;
+}
+.footer dl.wrap dt ul li dd {
+  margin-bottom: 10px;
+}
+.footer dl.wrap dd {
+  flex: 1;
+}
+.footer dl.wrap dd .iconfont {
+  font-size: 24px;
+}
+.footer dl.wrap dd .input-box {
+  height: 30px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.footer dl.wrap dd .input-box #newsletter {
+  height: 100%;
+  line-height: 30px;
+  width: 80%;
+  display: inline;
+}
+.footer dl.wrap dd .input-box button {
+  height: 26px;
+  border: none;
+  width: 30px;
+  background-color: #fff;
+}
+.footer dl.wrap dd .input-box button .icon-right:before {
+  transform: translate(0, 5px);
+  font-size: 32px;
 }

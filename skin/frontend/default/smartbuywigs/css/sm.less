@@ -84,46 +84,110 @@
 
 //首页
 .home-banner {
-  min-height: 320px;
+  min-height : 320px;
   .texts {
-    flex: 1;
+    flex : 1;
     .txt1 {
-      font-size: 36px;
+      font-size : 36px;
       p {
-        text-align: right;
-        padding-right: 20% ;
+        text-align    : right;
+        padding-right : 20%;
       }
       p + p {
-        font-size: 58px !important;
-        padding-right: 16% ;
+        font-size     : 58px !important;
+        padding-right : 16%;
       }
     }
     .txt2 {
-      font-size: 18px;
-      font-style: italic;
-      width: 60%;
-      text-align: left;
-      float: right;
-      padding-right: 20px;
-      text-indent: 16%;
+      font-size     : 18px;
+      font-style    : italic;
+      width         : 60%;
+      text-align    : left;
+      float         : right;
+      padding-right : 20px;
+      text-indent   : 16%;
     }
   }
   .nav {
-    flex: 1;
-    display:flex;
-    align-items: center;
-    ul{
-      width:35%;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      transform: translate(160px,-20px);
-      li{
-        background:#fff;
-        padding:10px 20px;
-        width:40%;
-        margin-top: 10px;
-        text-align: center;
+    flex        : 1;
+    display     : flex;
+    align-items : center;
+    ul {
+      width           : 35%;
+      display         : flex;
+      flex-flow       : row wrap;
+      justify-content : space-between;
+      transform       : translate(160px, -20px);
+      li {
+        background : #fff;
+        padding    : 10px 20px;
+        width      : 40%;
+        margin-top : 10px;
+        text-align : center;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color : #E8EAE9;
+  padding-top      : 40px;
+  dt {
+    font-family   : 'Martel';
+    font-size     : 16px;
+    font-weight   : 200;
+    margin-bottom : 15px;
+  }
+  dd {
+    font-size   : 14px;
+    font-family : 'futura-pt';
+    a {
+      color       : #333;
+      font-weight : 200;
+    }
+  }
+  dl.wrap {
+    display        : flex;
+    flex-direction : row;
+    dt {
+      flex : 3;
+      ul {
+        display   : flex;
+        flex-flow : row;
+        li {
+          flex       : 1;
+          text-align : left;
+          dd {
+            margin-bottom : 10px;
+          }
+        }
+      }
+    }
+    dd {
+      flex : 1;
+      .iconfont {
+        font-size : 24px;
+      }
+      .input-box {
+        height      : 30px;
+        background-color: #fff;
+        overflow: hidden;
+        #newsletter {
+          height: 100%;
+          line-height : 30px;
+          width       : 80%;
+          display: inline;
+        }
+        button {
+          height: 26px;
+          border           : none;
+          width            : 30px;
+          background-color : #fff;
+          .icon-right:before{
+            transform: translate(0,5px);
+            font-size: 32px;
+          }
+        }
       }
     }
   }

@@ -26,30 +26,95 @@
 ?>
 <div class="footer-container">
     <div class="footer">
-        <?php echo $this->getChildHtml() ?>
-        <p class="bugs"><?php echo $this->__('Help Us to Keep Magento Healthy') ?> - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target='_blank'"><strong><?php echo $this->__('Report All Bugs') ?></strong></a> <?php echo $this->__('(ver. %s)', Mage::getVersion()) ?></p>
-        <address><?php echo $this->getCopyright() ?></address>
+        <?php //echo $this->getChildHtml() ?>
+        <div class="container">
+            <div class="row">
+                <dl class="wrap">
+                    <dt>
+                        <ul>
+                            <li>
+                                <dl>
+                                    <dt>Company</dt>
+                                    <dd><a>About Us</a></dd>
+                                    <dd><a>Dermstore Spa</a></dd>
+                                    <dd><a>Testimonials</a></dd>
+                                    <dd><a>Press</a></dd>
+                                    <dd><a>Affiliates</a></dd>
+                                    <dd><a>Brand Submissions </a></dd>
+                                    <dd><a>eGift Cards</a></dd>
+                                </dl>
+                            </li>
+                        <li>
+                            <dl>
+                                <dt>Customer Service</dt>
+                                <dd><a>Customer Service</a></dd>
+                                <dd><a>FAQs</a></dd>
+                                <dd><a>About Rewards</a></dd>
+                                <dd><a>Order Status</a></dd>
+                                <dd><a>Shipping Information</a></dd>
+                                <dd><a>Product Recall</a></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>My Account</dt>
+                                <dd><a>Dermstore Subscriptions</a></dd>
+                                <dd><a>My Rewards</a></dd>
+                                <dd><a>My Favorites</a></dd>
+                                <dd><a>Order History</a></dd>
+                                <dd><a>Refer a Friend</a></dd>
+                                <dd><a>Returns</a></dd>
+                            </dl>
+                        </li>
+
+
+
+                        </ul>
+                    </dt>
+                    <dd>
+                       <h5>New Subscribers Receive 20% Off</h5>
+                        <div class="newsletter">
+                            <?php echo $this->getChildHtml('newsletter') ?>
+                        </div>
+                        <p>Follow Us On</p>
+                        <p>
+                            <a href="" class="iconfont icon-tian7_facebook"></a>
+                            <a href="" class="iconfont icon-youtube"></a>
+                            <a href="" class="iconfont icon-iconinstagram2"></a>
+                            <a href="" class="iconfont icon-pinterestpinterest30"></a>
+                            <a href="" class="iconfont icon-twitter3"></a>
+                            <a href="" class="iconfont icon-googleplus"></a>
+                            <a href="" class="iconfont "></a>
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <address>Copyright © 2017 smartbugwigs.com. All Rights Reserved.</address>
     </div>
 </div>
+
+
 <div id="mask" class="hidden">
 
 </div>
 <div class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-table">
-            <div class="modal-cell">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title"></h4>
-                        </div>
-                        <div class="modal-body">
-                        </div>
-                        <div class="modal-footer">
+        <div class="modal-cell">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
 
-                        </div>
-                    </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
         </div>
     </div>
 </div><!-- /.modal -->
