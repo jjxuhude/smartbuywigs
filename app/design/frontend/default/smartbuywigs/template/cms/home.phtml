@@ -18,14 +18,156 @@
         <div class="row">
             <div class="recommend">
                 <div class="wrap">
-                    <div class="name">We Recommend</div>
+                    <div class="line"></div>
+                    <div class="title1">We Recommend</div>
                 </div>
                 <div class="slider">
-
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                                <dl class="swiper-slide">
+                                    <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/1.jpg')?>" /></a></dt>
+                                    <dd>How Do Clay Masks Work? We Asked an Expert</dd>
+                                </dl>
+                                <dl class="swiper-slide">
+                                    <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/2.jpg')?>" /></a></dt>
+                                    <dd>How BeautyFIX Became One of the Top 1% of Subscription Boxes</dd>
+                                </dl>
+                                <dl class="swiper-slide">
+                                    <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/3.gif')?>" /></a></dt>
+                                    <dd>7 Old Hollywood-Approved Beauty Products We Still Love</dd>
+                                </dl>
+                                <dl class="swiper-slide">
+                                    <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/4.jpg')?>" /></a></dt>
+                                    <dd>How Do Clay Masks Work? We Asked an Expert</dd>
+                                </dl>
+                                <dl class="swiper-slide">
+                                    <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/5.jpeg')?>" /></a></dt>
+                                    <dd>How BeautyFIX Became One of the Top 1% of Subscription Boxes</dd>
+                                </dl>
+                                <dl class="swiper-slide">
+                                    <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/6.jpg')?>" /></a></dt>
+                                    <dd>7 Old Hollywood-Approved Beauty Products We Still Love</dd>
+                                </dl>
+                                <dl class="swiper-slide">
+                                    <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/7.jpg')?>" /></a></dt>
+                                    <dd>How Do Clay Masks Work? We Asked an Expert</dd>
+                                </dl>
+                                <dl class="swiper-slide">
+                                    <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/8.jpg')?>" /></a></dt>
+                                    <dd>How BeautyFIX Became One of the Top 1% of Subscription Boxes</dd>
+                                </dl>
+                                <dl class="swiper-slide">
+                                    <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/9.jpg')?>" /></a></dt>
+                                    <dd>7 Old Hollywood-Approved Beauty Products We Still Love</dd>
+                                </dl>
+                        </div>
+                        <!-- Add Pagination -->
+<!--                        <div class="swiper-pagination"></div>-->
+                        <div class="iconfont swiper-button-next"></div>
+                        <div class="iconfont swiper-button-prev "></div>
+                    </div>
+                    <script>
+		                var swiper = new Swiper('.swiper-container', {
+//			                pagination: '.swiper-pagination',
+			                nextButton: '.swiper-button-next',
+			                prevButton: '.swiper-button-prev',
+			                slidesPerView: 4,
+			                slidesPerGroup : 4,
+			                paginationClickable: true,
+			                spaceBetween: 30,
+//			                autoplay: 5000,
+//			                autoplayDisableOnInteraction: false,
+			                loop:true,
+			                breakpoints: {
+				                992: {
+					                slidesPerView: 3,
+					                slidesPerGroup: 3
+				                },
+				                1199: {
+					                slidesPerView: 4,
+					                slidesPerGroup: 4
+				                }
+			                }
+		                });
+                    </script>
                 </div>
 
             </div>
-            <div class="now"></div>
+            <div class="now">
+                <div class="wrap">
+                    <div class="line"></div>
+                    <div class="title1"> Now Trending </div>
+                </div>
+                <div class="slider">
+                    <div class="swiper-container-Trending">
+                        <div class="swiper-wrapper">
+                            <dl class="swiper-slide">
+                                <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/1.jpg')?>" /></a></dt>
+                                <dd>How Do Clay Masks Work? We Asked an Expert</dd>
+                            </dl>
+                            <dl class="swiper-slide">
+                                <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/2.jpg')?>" /></a></dt>
+                                <dd>How BeautyFIX Became One of the Top 1% of Subscription Boxes</dd>
+                            </dl>
+                            <dl class="swiper-slide">
+                                <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/3.gif')?>" /></a></dt>
+                                <dd>7 Old Hollywood-Approved Beauty Products We Still Love</dd>
+                            </dl>
+                            <dl class="swiper-slide">
+                                <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/4.jpg')?>" /></a></dt>
+                                <dd>How Do Clay Masks Work? We Asked an Expert</dd>
+                            </dl>
+                            <dl class="swiper-slide">
+                                <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/5.jpeg')?>" /></a></dt>
+                                <dd>How BeautyFIX Became One of the Top 1% of Subscription Boxes</dd>
+                            </dl>
+                            <dl class="swiper-slide">
+                                <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/6.jpg')?>" /></a></dt>
+                                <dd>7 Old Hollywood-Approved Beauty Products We Still Love</dd>
+                            </dl>
+                            <dl class="swiper-slide">
+                                <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/7.jpg')?>" /></a></dt>
+                                <dd>How Do Clay Masks Work? We Asked an Expert</dd>
+                            </dl>
+                            <dl class="swiper-slide">
+                                <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/8.jpg')?>" /></a></dt>
+                                <dd>How BeautyFIX Became One of the Top 1% of Subscription Boxes</dd>
+                            </dl>
+                            <dl class="swiper-slide">
+                                <dt><a href=""><img src="<?php echo $this->getSkinUrl('media/recommend/9.jpg')?>" /></a></dt>
+                                <dd>7 Old Hollywood-Approved Beauty Products We Still Love</dd>
+                            </dl>
+                        </div>
+                        <div class="iconfont swiper-button-next trending-next"></div>
+                        <div class="iconfont swiper-button-prev trending-prev"></div>
+                    </div>
+                    <script>
+			            var swiper = new Swiper('.swiper-container-Trending', {
+//			                pagination: '.swiper-pagination',
+				            nextButton: '.trending-next',
+				            prevButton: '.trending-prev',
+				            slidesPerView: 4,
+				            slidesPerGroup : 4,
+				            paginationClickable: true,
+				            spaceBetween: 30,
+//				            autoplay: 5000,
+//				            autoplayDisableOnInteraction: false,
+				            loop:true,
+				            breakpoints: {
+					            992: {
+						            slidesPerView: 3,
+						            slidesPerGroup: 3
+					            },
+					            1199: {
+						            slidesPerView: 4,
+						            slidesPerGroup: 4
+					            }
+				            }
+			            });
+                    </script>
+                </div>
+
+            </div>
             <div class="new"></div>
             <div class="footer-banner1"></div>
             <div class="footer-banner2"></div>
