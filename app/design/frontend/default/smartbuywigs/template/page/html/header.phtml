@@ -65,16 +65,17 @@
                             </li>
                             <li class="dropdown hidden-xs">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In / Sign Up
-                                <i class="sjdown"></i></a>
-                                <i class="sjup"></i></a>
+                                <i class="sjdown"></i>
+                                <i class="sjup"></i> </a>
                                 <ul class="login-menu1 hidden">
-                                    <li><a href="">Log In / Sign Up</a></li>
+                                    <li><a href=""><a href="<?php echo $this->getUrl('customer/account/login/')?>">Log In / Sign Up</a></li>
                                     <li><a href="">Track Order</a></li>
                                     <li><a href="">Easy Returns</a></li>
                                     <li><a href="">Order History</a></li>
                                     <li><a href="">My Favorites</a></li>
                                     <li><a href="">Dermstore Subscriptions</a></li>
                                 </ul>
+
                             </li>
 
                         </ul>
@@ -93,9 +94,9 @@
             <div class="row">
                 <div class="btns">
                     <div class="menu iconfont icon-menu icon-menu col-xs-2 hidden-lg hidden-md"></div>
-                    <div class="logo col-xs-8 text-center">smartbuywigs</div>
+                    <div class="logo col-xs-8 text-center"><a href="<?php echo $this->getUrl()?>">smartbuywigs</a></div>
                     <div class="checkout iconfont icon-gouwuche col-xs-2 col-md-4">
-                        <i>0</i>
+                        <i><?php echo Mage::getSingleton('checkout/session')->getQuote()->getItemsSummaryQty()?></i>
                     </div>
                 </div>
             </div>

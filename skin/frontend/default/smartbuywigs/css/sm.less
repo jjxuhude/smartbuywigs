@@ -40,11 +40,14 @@
     &:hover {
       .login-menu1 {
         display : block !important;
+        z-index: 200;
+        color:#777 !important;
       }
     }
     position : relative;
     .login-menu1 {
       padding    : 10px 5px;
+      color:#777 !important;
       &::before {
         content             : "";
         display             : block;
@@ -67,7 +70,8 @@
         box-shadow : none;
       }
       a {
-        color        : #777;
+        color        : #777 !important;
+        text-decoration: none;
         display      : block;
         font-size    : 14px;
         width        : 140px;

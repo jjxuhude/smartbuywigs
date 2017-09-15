@@ -41,17 +41,34 @@
                 </ul>
 
             </div>
-            <div class="m-nav-container">
+            <div class="m-nav-container hide-m-nav hidden-md hidden-lg">
+                <div class="m-logo"><a href="<?php echo $this->getUrl()?>">smartbuywigs</a></div>
+                <div class="search">
+                    <form id="search_mini_form1" action="<?php echo $this->getUrl('catalogsearch/result')?>" method="get" _lpchecked="1">
+                        <div class="form-search">
+                            <input id="search1" name="q" value="" class="input-text input-group form-control " maxlength="128" autocomplete="off" type="text">
+                            <button type="submit" title="Search" class="button"><span><span class="iconfont icon-search"></span></span></button>
+                            <div id="search_autocomplete" class="search-autocomplete" style="display: none;"></div>
+                            <script type="text/javascript">
+				                //<![CDATA[
+				                var searchForm = new Varien.searchForm('search_mini_form1', 'search1', 'Search entire store here...');
+				                searchForm.initAutocomplete('<?php echo $this->getUrl('catalogsearch/ajax/suggest')?>', 'search_autocomplete');
+				                //]]>
+                            </script>
+                        </div>
+                    </form>
+                </div>
                 <ul id="m-nav" class=" hidden-md hidden-lg">
                     <?php echo $_menu ?>
                 </ul>
+                <div class="login-link"><i class="iconfont icon-customer"></i><a href="<?php echo $this->getUlr('customer/account/login')?>">Log In</a></div>
             </div>
         </div>
     </div>
 <?php endif ?>
 <script>
     (function($){
-	    $(".m-nav-container").niceScroll();
+	    //$(".m-nav-container").niceScroll();
 	    $('#nav>li')
             .mouseenter(function(){
 //                console.log(this);
@@ -61,22 +78,26 @@
                 $(this).find('ul').addClass('hidden');
             });
 
-        function mnav(params){
-            this.selector=params.selector;
-            this.ele=$(params.ele);
-            this.eleInnerHeight=0;
-            this.eleOutDownHeight=0;
-            this.eleOutTopHeight=0;
-            this.winHeight=0;
-            this.navHeight=0;
-        }
-        mnav.prototype={
-            run: function (){
-
-            }
-        }
-
-
+	    function Mnav(params){
+		    this.selector=params.selector;
+		    this.ele=$(params.ele).closest('li');
+		    this.winHeight=$(this.selector).outerHeight(true);
+		    this.eleHeight=$(this.ele).outerHeight(true);
+		    this.eleOutTopHeight=$(this.ele).offset().top;
+		    this.eleOutDownHeight=this.winHeight - this.eleHeight -this.eleOutTopHeight;
+		    this.scrollTop=$(this.selector).scrollTop();
+		    this.init();
+	    }
+	    Mnav.prototype={
+	    	init: function(){},
+		    run: function (){
+                //console.log(this);
+                if(this.eleOutDownHeight<0){
+                    var top = this.scrollTop + this.eleOutTopHeight;
+                    $(this.selector).animate({'scrollTop':top},1000);
+                }
+		    }
+	    }
 
         $('#m-nav').on('click','.icon-add',function(e){
             e.preventDefault();
@@ -85,6 +106,8 @@
             $(this).removeClass('icon-add').addClass('icon-div');
             $('#m-nav li').removeClass('current');
             $(this).closest('li').addClass('current');
+            var mnav= new Mnav({'selector':'.m-nav-container','ele':this});
+	        mnav.run();
         })
         $('#m-nav').on('click','.icon-div',function(e){
             e.preventDefault();
@@ -92,5 +115,16 @@
             $(this).closest('li').children('ul').addClass('hidden');
             $(this).removeClass('icon-div').addClass('icon-add');
         })
+
+        $('.icon-menu').click(function(){
+        	$('body').addClass('overflow-hide');
+        	$('#mask').removeClass('hidden');
+        	$('.m-nav-container').removeClass('hide-m-nav');
+        })
+        $('.page').on('click','.mask',function(){
+	        $('body').removeClass('overflow-hide');
+	        $('#mask').addClass('hidden');
+	        $('.m-nav-container').addClass('hide-m-nav');
+        });
     })(jQuery);
 </script>

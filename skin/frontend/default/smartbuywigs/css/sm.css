@@ -83,6 +83,9 @@ img {
 .swiper-button-prev:before {
   content: "\e61a";
 }
+.overflow-hide {
+  overflow: hidden;
+}
 #mask {
   position: fixed;
   z-index: 100;
@@ -120,9 +123,12 @@ img {
 }
 .header-top .dropdown:hover .login-menu1 {
   display: block !important;
+  z-index: 200;
+  color: #777 !important;
 }
 .header-top .dropdown .login-menu1 {
   padding: 10px 5px;
+  color: #777 !important;
   position: absolute;
   left: -56px;
   top: 42px;
@@ -147,7 +153,8 @@ img {
   box-shadow: none;
 }
 .header-top .dropdown .login-menu1 a {
-  color: #777;
+  color: #777 !important;
+  text-decoration: none;
   display: block;
   font-size: 14px;
   width: 140px;
