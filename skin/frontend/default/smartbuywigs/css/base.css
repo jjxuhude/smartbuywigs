@@ -372,7 +372,7 @@ img {
   }
 }
 @media screen and (max-width: 991px) {
-  .nav-container {
+  .m-nav-container {
     overflow: scroll;
     height: 100%;
     width: calc(100% - 100px);
@@ -381,7 +381,7 @@ img {
     top: 0;
     z-index: 300;
   }
-  .nav-container a span {
+  .m-nav-container a span {
     font-family: 'martel', serif;
     text-transform: capitalize;
     font-size: 14px;
@@ -391,20 +391,20 @@ img {
     padding: 12px 15px;
     border-bottom: 1px solid #000;
   }
-  .nav-container a span i:before {
+  .m-nav-container a span i:before {
     padding: 5px;
   }
-  .nav-container #m-nav li.current > a > span {
+  .m-nav-container #m-nav li.current > a > span {
     background: #fff;
     color: #000;
   }
-  .nav-container #m-nav li.current > a > span > .iconfont {
+  .m-nav-container #m-nav li.current > a > span > .iconfont {
     color: #000;
   }
-  .nav-container #m-nav li.level0 ul li.level1 a span {
+  .m-nav-container #m-nav li.level0 ul li.level1 a span {
     padding-left: 30px;
   }
-  .nav-container #m-nav li.level0 ul li.level1 ul li.level2 a span {
+  .m-nav-container #m-nav li.level0 ul li.level1 ul li.level2 a span {
     padding-left: 50px;
   }
 }

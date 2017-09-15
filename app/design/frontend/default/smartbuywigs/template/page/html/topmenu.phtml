@@ -35,12 +35,14 @@
 <?php if ($_menu): ?>
     <div class="container">
         <div class="row">
-
             <div class="nav-container">
-                <ul id="nav" class="visible-ml-block visible-lg-block">
+                <ul id="nav" class="hidden-sm hidden-xs">
                     <?php echo $_menu ?>
                 </ul>
-                <ul id="m-nav" class="visible-xs-block visible-sm-block">
+
+            </div>
+            <div class="m-nav-container">
+                <ul id="m-nav" class=" hidden-md hidden-lg">
                     <?php echo $_menu ?>
                 </ul>
             </div>
@@ -49,7 +51,8 @@
 <?php endif ?>
 <script>
     (function($){
-        $('#nav>li')
+	    $(".m-nav-container").niceScroll();
+	    $('#nav>li')
             .mouseenter(function(){
 //                console.log(this);
                 $(this).find('ul.hidden').removeClass('hidden');
