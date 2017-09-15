@@ -32,10 +32,47 @@
  */
 ?>
 <?php $_menu = $this->getHtml('level-top') ?>
-<?php if($_menu): ?>
-<div class="nav-container">
-    <ul id="nav">
-        <?php echo $_menu ?>
-    </ul>
-</div>
+<?php if ($_menu): ?>
+    <div class="container">
+        <div class="row">
+
+            <div class="nav-container">
+                <ul id="nav" class="visible-ml-block visible-lg-block">
+                    <?php echo $_menu ?>
+                </ul>
+                <ul id="m-nav" class="visible-xs-block visible-sm-block">
+                    <?php echo $_menu ?>
+                </ul>
+            </div>
+        </div>
+    </div>
 <?php endif ?>
+<script>
+    (function($){
+        $('#nav>li')
+            .mouseenter(function(){
+//                console.log(this);
+                $(this).find('ul.hidden').removeClass('hidden');
+            })
+            .mouseleave(function(){
+                $(this).find('ul').addClass('hidden');
+            });
+
+
+        $('#m-nav').on('click','.icon-add',function(e){
+            e.preventDefault();
+            e.stopPropagation();
+
+            $(this).closest('li').children('ul.hidden').removeClass('hidden');
+            $(this).removeClass('icon-add').addClass('icon-div');
+            $('#m-nav li').removeClass('current');
+            $(this).closest('li').addClass('current')
+        })
+        $('#m-nav').on('click','.icon-div',function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).closest('li').children('ul').addClass('hidden');
+            $(this).removeClass('icon-div').addClass('icon-add');
+        })
+    })(jQuery);
+</script>

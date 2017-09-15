@@ -242,12 +242,15 @@ class Mage_Catalog_Model_Observer
             }
 
             $tree = $parentCategoryNode->getTree();
+            $cateModel=Mage::getModel('catalog/category')->load($category->getId());
             $categoryData = array(
                 'name' => $category->getName(),
                 'id' => $nodeId,
                 'url' => Mage::helper('catalog/category')->getCategoryUrl($category),
+                'category_banner' => $cateModel->getCategoryBanner(),
                 'is_active' => $this->_isActiveMenuCategory($category)
             );
+            //dump($cateModel->getCategoryBanner());
             $categoryNode = new Varien_Data_Tree_Node($categoryData, 'id', $tree, $parentCategoryNode);
             $parentCategoryNode->addChild($categoryNode);
 

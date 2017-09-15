@@ -129,15 +129,22 @@ class Mage_Page_Block_Html_Topmenu extends Mage_Core_Block_Template
                 $child->setClass($outermostClass);
             }
 
+            if($child->hasChildren()){
+                $action='<i class="iconfont pull-right icon-add hidden-md hidden-lg"></i>';
+            }else{
+                $action='';
+            }
             $html .= '<li ' . $this->_getRenderedMenuItemAttributes($child) . '>';
             $html .= '<a href="' . $child->getUrl() . '" ' . $outermostClassCode . '><span>'
-                . $this->escapeHtml($child->getName()) . '</span></a>';
+                . $this->escapeHtml($child->getName())
+                . $action
+                . '</span></a>';
 
             if ($child->hasChildren()) {
                 if (!empty($childrenWrapClass)) {
                     $html .= '<div class="' . $childrenWrapClass . '">';
                 }
-                $html .= '<ul class="level' . $childLevel . '">';
+                $html .= '<ul class="hidden level' . $childLevel . '">';
                 $html .= $this->_getHtml($child, $childrenWrapClass);
                 $html .= '</ul>';
 
@@ -147,10 +154,21 @@ class Mage_Page_Block_Html_Topmenu extends Mage_Core_Block_Template
             }
             $html .= '</li>';
 
+
+
             $counter++;
         }
-
+        $html .= $this->getCatalogBannerHtml($menuTree);
         return $html;
+    }
+
+    public function getCatalogBannerHtml($catalog){
+
+        $category_banner=$catalog->getData('category_banner')?:'';
+        if($catalog->getLevel()==0 && $category_banner){
+              $templateEngine=Mage::helper('cms')->getPageTemplateProcessor();
+              return '<li class="category-banner '.$catalog->getId().' hidden-xs hidden-sm">'.$templateEngine->filter($category_banner).'</li>';
+        }
     }
 
     /**

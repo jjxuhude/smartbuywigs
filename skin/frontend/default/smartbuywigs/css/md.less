@@ -84,11 +84,73 @@
 
 }
 
-.home-content{
-  .recommend{}
-  .now{}
-  .new{}
-  .footer-banner1{}
-  .footer-banner2{}
+//分类导航
+#nav{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  a{
+    color: #353535;
+  }
+  //
+  .level0{
+    a{
+      span{
+        font-family: 'Martel', Georgia, "Times New Roman", Times, serif !important;
+        color: #353535;
+        font-weight: 400;
+      }
+    }
+    ul.level0{
+      position: absolute;
+      padding-top:30px;
+      left:0;
+      top:20px;
+      padding-bottom: 20px;
+      z-index: 200;
+      width: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: space-around;
+      li.level1.parent>a>span{
+        display: inline-block;
+        width:100%;
+        border-bottom: 1px solid #079cb4;
+        padding-bottom: 5px;
+        font-weight: 700;
+        &::before{
+
+        }
+      }
+    }
+    level1.nav-3-3.parent:before{
+      display: inline-block;
+      width:100%;
+      border-bottom: 1px solid red;
+      padding-bottom: 5px;
+      font-weight: 700;
+    }
+    ul.level1{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      height: 100%;
+      margin-top: 20px;
+      li{
+        margin-bottom: 5px;
+      }
+    }
+
+  }
+  //
+
+
+
+
 }
+
 
