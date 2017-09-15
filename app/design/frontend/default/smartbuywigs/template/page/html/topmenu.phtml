@@ -58,15 +58,30 @@
                 $(this).find('ul').addClass('hidden');
             });
 
+        function mnav(params){
+            this.selector=params.selector;
+            this.ele=$(params.ele);
+            this.eleInnerHeight=0;
+            this.eleOutDownHeight=0;
+            this.eleOutTopHeight=0;
+            this.winHeight=0;
+            this.navHeight=0;
+        }
+        mnav.prototype={
+            run: function (){
+
+            }
+        }
+
+
 
         $('#m-nav').on('click','.icon-add',function(e){
             e.preventDefault();
             e.stopPropagation();
-
             $(this).closest('li').children('ul.hidden').removeClass('hidden');
             $(this).removeClass('icon-add').addClass('icon-div');
             $('#m-nav li').removeClass('current');
-            $(this).closest('li').addClass('current')
+            $(this).closest('li').addClass('current');
         })
         $('#m-nav').on('click','.icon-div',function(e){
             e.preventDefault();
