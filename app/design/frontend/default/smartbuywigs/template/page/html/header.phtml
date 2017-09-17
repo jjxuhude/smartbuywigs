@@ -64,17 +64,17 @@
                                 </a>
                             </li>
                             <li class="dropdown hidden-xs">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Log In / Sign Up
-                                <i class="sjdown"></i>
-                                <i class="sjup"></i> </a>
-                                <ul class="login-menu1 hidden">
-                                    <li><a href=""><a href="<?php echo $this->getUrl('customer/account/login/')?>">Log In / Sign Up</a></li>
-                                    <li><a href="">Track Order</a></li>
-                                    <li><a href="">Easy Returns</a></li>
-                                    <li><a href="">Order History</a></li>
-                                    <li><a href="">My Favorites</a></li>
-                                    <li><a href="">Dermstore Subscriptions</a></li>
-                                </ul>
+                                <a href="<?php echo $this->getUrl('customer/account/login/')?>" >Log In / Sign Up</a>
+<!--                                <i class="sjdown"></i>-->
+<!--                                <i class="sjup"></i> </a>-->
+<!--                                <ul class="login-menu1 hidden">-->
+<!--                                    <li><a href=""><a href="--><?php //echo $this->getUrl('customer/account/login/')?><!--">Log In / Sign Up</a></li>-->
+<!--                                    <li><a href="">Track Order</a></li>-->
+<!--                                    <li><a href="">Easy Returns</a></li>-->
+<!--                                    <li><a href="">Order History</a></li>-->
+<!--                                    <li><a href="">My Favorites</a></li>-->
+<!--                                    <li><a href="">Dermstore Subscriptions</a></li>-->
+<!--                                </ul>-->
 
                             </li>
 
@@ -94,7 +94,22 @@
             <div class="row">
                 <div class="btns">
                     <div class="menu iconfont icon-menu icon-menu col-xs-2 hidden-lg hidden-md"></div>
-                    <div class="logo col-xs-8 text-center"><a href="<?php echo $this->getUrl()?>">smartbuywigs</a></div>
+                    <div class="logo col-xs-8 col-sm-8 col-md-4 text-center"><a href="<?php echo $this->getUrl()?>">smartbuywigs</a></div>
+                    <div class="search search2 col-md-4 hidden-xs hidden-sm" style="border: none;">
+                        <form id="search_mini_form2" action="<?php echo $this->getUrl('catalogsearch/result')?>" method="get" _lpchecked="1">
+                            <div class="form-search">
+                                <input id="search2" name="q" value="" class="input-text input-group form-control " maxlength="128" autocomplete="off" type="text">
+                                <button type="submit" title="Search" class="button"><span><span class="iconfont icon-search"></span></span></button>
+                                <div id="search_autocomplete" class="search-autocomplete" style="display: none;"></div>
+                                <script type="text/javascript">
+					                //<![CDATA[
+					                var searchForm = new Varien.searchForm('search_mini_form2', 'search2', 'Search entire store here...');
+					                searchForm.initAutocomplete('<?php echo $this->getUrl('catalogsearch/ajax/suggest')?>', 'search_autocomplete');
+					                //]]>
+                                </script>
+                            </div>
+                        </form>
+                    </div>
                     <div class="checkout iconfont icon-gouwuche col-xs-2 col-md-4">
                         <i><?php echo Mage::getSingleton('checkout/session')->getQuote()->getItemsSummaryQty()?></i>
                     </div>
@@ -103,7 +118,7 @@
         </div>
     </div>
 
-    <div class="search search-block">
+    <div class="search search-block hidden-md hidden-lg">
         <div class="container">
             <div class="row">
                 <div class="search"> <?php echo $this->getChildHtml('topSearch') ?></div>

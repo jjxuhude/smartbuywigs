@@ -25,18 +25,17 @@
  */
 ?>
 <?php if ($this->getReviewsCount()): ?>
-    <div class="ratings">
+    <div class="ratings list">
         <?php if ($this->getRatingSummary()):?>
             <div class="rating-box">
-                <div class="rating" style="width:<?php echo $this->getRatingSummary() ?>%"></div>
+                <?php  $n = round($this->getRatingSummary() / 10/2 );$m=5-$n?>
+                <?php for($i=0;$i<$n;$i++):?><span class="rating iconfont icon-wujiaoxing"></span><?php endfor;?><?php for($i=0;$i<$m;$i++):?><span class="rating iconfont icon-wujiaoxing" style="color:#ccc;"></span><?php endfor;?><a href="<?php echo $this->getReviewsUrl() ?>"><?php echo $this->__('(%d)', $this->getReviewsCount()) ?></a>
             </div>
         <?php endif;?>
-        <p class="rating-links">
-            <a href="<?php echo $this->getReviewsUrl() ?>"><?php echo $this->__('%d Review(s)', $this->getReviewsCount()) ?></a>
-            <span class="separator">|</span>
-            <a href="<?php echo $this->getReviewsUrl() ?>#review-form"><?php echo $this->__('Add Your Review') ?></a>
-        </p>
     </div>
-<?php elseif ($this->getDisplayIfEmpty()): ?>
-    <p class="no-rating"><a href="<?php echo $this->getReviewsUrl() ?>#review-form"><?php echo $this->__('Be the first to review this product') ?></a></p>
+<?php elseif (true): ?>
+    <p>
+    <?php for($i=0;$i<5;$i++):?><span class="rating iconfont icon-wujiaoxing" style="color:#ccc;"></span><?php endfor;?>
+    </p>
+
 <?php endif; ?>

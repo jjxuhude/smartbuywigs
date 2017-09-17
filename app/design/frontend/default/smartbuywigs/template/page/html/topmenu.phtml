@@ -33,17 +33,19 @@
 ?>
 <?php $_menu = $this->getHtml('level-top') ?>
 <?php if ($_menu): ?>
-    <div class="container">
-        <div class="row">
-            <div class="nav-container">
-                <ul id="nav" class="hidden-sm hidden-xs">
-                    <?php echo $_menu ?>
-                </ul>
+    <div class="top-menu">
 
+
+    <div class="container1">
+        <div class="row1">
+            <div class="nav-container">
+                        <ul id="nav" class="hidden-sm hidden-xs ">
+                                    <?php echo $_menu ?>
+                        </ul>
             </div>
             <div class="m-nav-container hide-m-nav hidden-md hidden-lg">
                 <div class="m-logo"><a href="<?php echo $this->getUrl()?>">smartbuywigs</a></div>
-                <div class="search">
+                <div class="search ">
                     <form id="search_mini_form1" action="<?php echo $this->getUrl('catalogsearch/result')?>" method="get" _lpchecked="1">
                         <div class="form-search">
                             <input id="search1" name="q" value="" class="input-text input-group form-control " maxlength="128" autocomplete="off" type="text">
@@ -64,6 +66,7 @@
                 <div class="login-link"><i class="iconfont icon-customer"></i><a href="<?php echo $this->getUlr('customer/account/login')?>">Log In</a></div>
             </div>
         </div>
+    </div>
     </div>
 <?php endif ?>
 <script>
