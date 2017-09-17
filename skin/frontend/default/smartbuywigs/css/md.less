@@ -354,7 +354,10 @@
       }
     }
     .product-shop {
-      h1{font-size: 28px;font-family: @title-font}
+      h1 {
+        font-size   : 28px;
+        font-family : @title-font
+      }
       flex : 1;
       .product-name {
         font-family : @title-font;
@@ -418,14 +421,16 @@
         #product-addtocart-button {
           background     : #079CB4;
           color          : #fff;
-          height         : 40px;
+          height         : 34px;
+          width          : auto;
           float          : right;
           font-weight    : 400;
           font-family    : 'Martel';
           border         : none;
-          padding        : 5px 60px;
+          padding        : 5px 55px;
           font-size      : 18px;
           text-transform : uppercase;
+          border-radius  : 5px;
           &:hover {
             opacity : .8;
           }
@@ -446,10 +451,10 @@
 
   .product-collateral {
     .label {
-      color : #000;
-      font-size : 14px !important;
-      padding-left: 0px;
-      padding-right: 20px;
+      color         : #000;
+      font-size     : 14px !important;
+      padding-left  : 0px;
+      padding-right : 20px;
     }
     display         : flex;
     flex-direction  : row;
@@ -476,12 +481,12 @@
       h2 {
         font-family : @title-font;
         font-size   : 18px;
-        &::before{
+        &::before {
 
         }
-        .iconfont{
-          float:right;
-          padding-right: 20px;
+        .iconfont {
+          float         : right;
+          padding-right : 20px;
         }
       }
       .panel-body {
@@ -489,31 +494,34 @@
       }
     }
   }
-  .box-up-sell{
-    h3{line-height: 12px;
-      height: 24px;padding:0;margin-top:0;
+  .box-up-sell {
+    h3 {
+      line-height : 12px;
+      height      : 24px;
+      padding     : 0;
+      margin-top  : 0;
 
     }
-    a,a:hover {
-      color: #4e4e4e;
-      font-size: 14px;
-      line-height: 14px;
+    a, a:hover {
+      color       : #4e4e4e;
+      font-size   : 14px;
+      line-height : 14px;
     }
-    h2 p{
-      text-align: center;
-      font-family: 'Martel';
-      font-size: 18px;
-      width: 60%;
-      margin: 0 auto;
-      transform: translateY(5px);
-      background: #fff;
+    h2 p {
+      text-align  : center;
+      font-family : 'Martel';
+      font-size   : 18px;
+      width       : 60%;
+      margin      : 0 auto;
+      transform   : translateY(5px);
+      background  : #fff;
     }
   }
-  .line{
-    height: 1px;
-    background: #D9D9D9;
-    position: relative;
-    top: 16px;
+  .line {
+    height     : 1px;
+    background : #D9D9D9;
+    position   : relative;
+    top        : 16px;
   }
 
 }

@@ -697,13 +697,14 @@ img {
   font-weight: 400;
 }
 .product-view .product-essential form .product-shop .add-to-box .qty {
-  width: 30%;
+  width: 100%;
   display: inline-block;
 }
 .product-view .product-essential form .product-shop .add-to-box #product-addtocart-button {
   background: #079CB4;
   color: #fff;
   height: 34px;
+  width: 100%;
   float: right;
   font-weight: 400;
   font-family: 'Martel';
@@ -718,10 +719,10 @@ img {
 .product-view .product-essential form .product-shop .add-to-box .loading {
   width: 16px;
   height: 16px;
-  display: inline-block;
-  float: right;
+  display: block;
   height: 40px;
   line-height: 40px;
+  margin: 0 auto;
 }
 .product-view .product-collateral {
   display: flex;

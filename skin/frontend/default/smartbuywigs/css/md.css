@@ -447,14 +447,16 @@ img {
 .product-view .product-essential form .product-shop .add-to-box #product-addtocart-button {
   background: #079CB4;
   color: #fff;
-  height: 40px;
+  height: 34px;
+  width: auto;
   float: right;
   font-weight: 400;
   font-family: 'Martel';
   border: none;
-  padding: 5px 60px;
+  padding: 5px 55px;
   font-size: 18px;
   text-transform: uppercase;
+  border-radius: 5px;
 }
 .product-view .product-essential form .product-shop .add-to-box #product-addtocart-button:hover {
   opacity: .8;
