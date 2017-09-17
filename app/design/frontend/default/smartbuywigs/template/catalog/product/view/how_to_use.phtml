@@ -1,0 +1,21 @@
+<?php $_description = $this->getProduct()->getDescription(); ?>
+<?php if ($_description): ?>
+    <h2><?php echo $this->__('How to Use') ?> <i class="iconfont icon-add"></i></h2>
+    <div class="std hidden">
+        <?php //echo $this->helper('catalog/output')->productAttribute($this->getProduct(), $_description, 'description') ?>
+        <div class="panel-body">
+            <p><b>Scalp Stimulating Shampoo:</b> Massage into wet hair and scalp. For best results, allow the product to sit for 1-2 minutes. Rinse hair thoroughly. Follow with Keranique Volumizing Conditioner.
+                <br>
+                <b>Volumizing Keratin Conditioner:</b> Work a small amount into damp hair. Run through hair thoroughly from scalp to ends. For best results, allow the product to sit for 1 - 2 minutes. Rinse hair thoroughly. Towel dry hair.
+                <br>
+                <b>Hair Regrowth Treatment:</b> Apply 1mL with 2 times a day directly onto the scalp in the hair loss area. Using more product or applying more frequently will not improve results. Continued use is necessary to maintain your hair regrowth, or the normal hair loss process will begin again. Must wash hands after use.
+                <b>Warning:</b> For external use only. Avoid spraying product in eyes. Ask a doctor before use if you have a heart disease.
+                <br>
+                <b>Lift &amp; Repair Treatment Spray:</b> Wash and towel dry hair. Apply Keranique Lift &amp; Repair Treatment Spray to roots of hair. Using fingers, distribute product from roots to ends. For added lift and volume, blow dry hair using medium setting, turning head upside down and combing through hair with fingers to separate strands while drying. Spray on additional product for added lift and expansion. To maximize effects of this product, blow dry hair until completely dry.
+                <br><br>
+                <b><a href="http://images.dermstore.com/dermstore/features/keranique_faqs_v02162016.pdf" target="_blank">Keranique FAQs &gt;</a></b>
+                <br><br>
+                <b>Warning:</b> For external use only. Avoid spraying product in eyes.</p>
+        </div>
+    </div>
+<?php endif; ?>

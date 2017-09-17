@@ -38,7 +38,7 @@
 </script>
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
 <div class="product-view">
-    <div class="product-essential">
+    <div class="product-essential container">
     <form action="<?php echo $this->getSubmitUrl($_product, array('_secure' => $this->_isSecure())) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
         <?php echo $this->getBlockHtml('formkey') ?>
         <div class="no-display">
@@ -51,11 +51,21 @@
                 <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
             </div>
 
+            <?php if ($_product->getShortDescription()):?>
+                <div class="short-description">
+                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                </div>
+            <?php endif;?>
+
             <?php if ($this->canEmailToFriend()): ?>
                 <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
             <?php endif; ?>
 
+            <div class="wishlist">
             <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
+            <?php echo $this->getChildHtml('addto') ?>
+            </div>
+
             <?php echo $this->getChildHtml('alert_urls') ?>
             <?php echo $this->getChildHtml('product_type_data') ?>
             <?php echo $this->getTierPriceHtml() ?>
@@ -66,10 +76,9 @@
                     <?php if($_product->isSaleable()): ?>
                         <?php echo $this->getChildHtml('addtocart') ?>
                         <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                            <span class="or"><?php echo $this->__('OR') ?></span>
                         <?php endif; ?>
                     <?php endif; ?>
-                    <?php echo $this->getChildHtml('addto') ?>
+
                 </div>
                 <?php echo $this->getChildHtml('extra_buttons') ?>
             <?php elseif (!$_product->isSaleable()): ?>
@@ -78,12 +87,7 @@
                 </div>
             <?php endif; ?>
 
-            <?php if ($_product->getShortDescription()):?>
-                <div class="short-description">
-                    <h2><?php echo $this->__('Quick Overview') ?></h2>
-                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
-                </div>
-            <?php endif;?>
+
 
             <?php echo $this->getChildHtml('other');?>
 
@@ -175,16 +179,47 @@
     </script>
     </div>
 
-    <div class="product-collateral">
-<?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
-        <div class="box-collateral <?php echo "box-{$alias}"?>">
-            <?php if ($title = $this->getChildData($alias, 'title')):?>
-            <h2><?php echo $this->escapeHtml($title); ?></h2>
-            <?php endif;?>
-            <?php echo $html; ?>
+    <div class="product-collateral container">
+
+        <div class="box-left">
+            <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
+                <?php if($alias ==  'description'):?>
+                <div class="box-collateral <?php echo "box-{$alias}"?>">
+                    <?php if ($title = $this->getChildData($alias, 'title')):?>
+                        <h2><?php echo $this->escapeHtml($title); ?></h2>
+                    <?php endif;?>
+                    <?php echo $html; ?>
+                </div>
+                <?php endif;?>
+            <?php endforeach;?>
         </div>
-<?php endforeach;?>
-        <?php echo $this->getChildHtml('upsell_products') ?>
-        <?php echo $this->getChildHtml('product_additional_data') ?>
+        <div class="box-right">
+            <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
+                <?php if($alias !=  'description'):?>
+                    <div class="box-collateral <?php echo "box-{$alias}"?>">
+                        <?php if ($title = $this->getChildData($alias, 'title')):?>
+                            <h2><?php echo $this->escapeHtml($title); ?></h2>
+                        <?php endif;?>
+                        <?php echo $html; ?>
+                    </div>
+                <?php endif;?>
+            <?php endforeach;?>
+        </div>
+
     </div>
+    <?php echo $this->getChildHtml('upsell_products') ?>
+    <?php echo $this->getChildHtml('product_additional_data') ?>
 </div>
+
+<script>
+    (function($){
+    	$('.box-collateral').on('click','.icon-div',function(){
+			    $(this).closest('.box-collateral').find('.std').addClass('hidden');
+			    $(this).removeClass('icon-div').addClass('icon-add');
+	    });
+	    $('.box-collateral').on('click','.icon-add',function(){
+			    $(this).closest('.box-collateral').find('.std').removeClass('hidden');
+			    $(this).removeClass('icon-add').addClass('icon-div');
+	    });
+    })(jQuery);
+</script>

@@ -27,7 +27,6 @@
   }
 }
 
-
 .header-container {
   position : relative;
   .search {
@@ -42,22 +41,24 @@
 
   }
 }
+
 .header-container .search .icon-search::before {
-  line-height: 100%;
-  position: absolute;
-  top: 4px;
-  right: 2px;
+  line-height : 100%;
+  position    : absolute;
+  top         : 4px;
+  right       : 2px;
 }
+
 .header-container .search button {
-  border: none;
-  background: transparent;
-  float: right;
-  width: 32px;
-  height: 32px;
-  display: inline-block;
-  position: absolute;
-  right: 13px;
-  top: 10px;
+  border     : none;
+  background : transparent;
+  float      : right;
+  width      : 32px;
+  height     : 32px;
+  display    : inline-block;
+  position   : absolute;
+  right      : 13px;
+  top        : 10px;
 }
 
 //首页
@@ -113,9 +114,9 @@
   flex-direction  : row;
   flex-wrap       : nowrap;
   justify-content : space-between;
-  margin: 0;
-  padding-bottom: 10px;
-  padding: 0 15px;
+  margin          : 0;
+  padding-bottom  : 10px;
+  padding         : 0 15px;
 
   a {
     color : #353535;
@@ -130,9 +131,9 @@
       }
     }
     ul.level0 {
-      position: fixed;
+      position        : fixed;
       left            : 0;
-      top: 156px;
+      top             : 156px;
       padding         : 0 10%;
       padding-top     : 30px;
       padding-bottom  : 20px;
@@ -196,7 +197,7 @@
   border-bottom  : 2px solid #ccc;
 }
 
-.list-product-fun(){
+.list-product-fun() {
   .category-products {
     a {
       color           : #000;
@@ -236,26 +237,26 @@
       flex-flow       : row wrap;
 
       li {
-        margin-bottom: 10px;
-        width   : calc(~"( 100% - 20px ) /3 ");
-        padding : 0 15px;
+        margin-bottom : 10px;
+        width         : calc(~"( 100% - 20px ) /3 ");
+        padding       : 0 15px;
         h2 {
-          padding     : 0;
-          margin      : 0;
-          line-height : 12px;
-          font-weight : 600;
-          height      : 36px;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          padding       : 0;
+          margin        : 0;
+          line-height   : 12px;
+          font-weight   : 600;
+          height        : 36px;
+          overflow      : hidden;
+          text-overflow : ellipsis;
           //white-space: nowrap;
         }
         a.product-image > img {
           max-width : 228px;
         }
-        >a{
-          display: block;
-          margin:0 auto;
-          text-align: center;
+        > a {
+          display    : block;
+          margin     : 0 auto;
+          text-align : center;
         }
         .product-shop {
           width  : 90%;
@@ -280,20 +281,21 @@
     }
   }
 }
+
 .category-block {
   padding-top : 20px;
   .block-layered-nav {
     .label {
-      display: inline;
-      padding: .2em .6em .3em;
-      font-size: 75%;
-      font-weight: bold;
-      line-height: 1;
-      color: @list-font-color;
-      text-align: center;
-      white-space: nowrap;
-      vertical-align: baseline;
-      border-radius: .25em;
+      display        : inline;
+      padding        : .2em .6em .3em;
+      font-size      : 75%;
+      font-weight    : bold;
+      line-height    : 1;
+      color          : @list-font-color;
+      text-align     : center;
+      white-space    : nowrap;
+      vertical-align : baseline;
+      border-radius  : .25em;
     }
     .block-title {
       color          : #FF6C0C;
@@ -320,10 +322,198 @@
   }
 
 }
+
 .list-product-fun;
 
-.category-products.catalogsearch  ol#products-list li {
-  margin-bottom: 20px;
-  width: calc(~"( 100% - 20px ) /4" );
-  padding: 0 15px;
+.category-products.catalogsearch ol#products-list li {
+  margin-bottom : 20px;
+  width         : calc(~"( 100% - 20px ) /4");
+  padding       : 0 15px;
+}
+
+//产品详情页面
+.product-view {
+  color : @list-font-color;
+
+  a, a:hover {
+    color : @list-font-color
+  }
+  .product-essential form {
+    display         : flex;
+    flex-direction  : row-reverse;
+    justify-content : space-between;
+
+    .product-img-box {
+      flex : 1;
+      .product-image {
+      }
+      .more-views ul {
+        display         : flex;
+        flex-flow       : row nowrap;
+        justify-content : flex-start;
+      }
+    }
+    .product-shop {
+      h1{font-size: 28px;font-family: @title-font}
+      flex : 1;
+      .product-name {
+        font-family : @title-font;
+        font-size   : 18px;
+      }
+      .short-description {
+        margin : 40px 0;
+      }
+      .ratings {
+        font-size : 16px;
+        .icon-wujiaoxing {
+          color     : #FF9A00;
+          font-size : 12px;
+        }
+      }
+      .wishlist {
+        display         : flex;
+        flex-direction  : row;
+        justify-content : flex-start;
+        .add-to-links {
+          flex : 1
+        }
+        .ratings {
+          flex : 1
+        }
+      }
+      .add-to-links {
+        .icon-heart {
+          color         : #F97426;
+          font-size     : 20px;
+          padding-right : 10px
+        }
+        .link-wishlist {
+
+          padding         : 10px 20px;
+          background      : #fff;
+          text-transform  : uppercase;
+          text-decoration : none;
+          &:hover {
+            border : 1px solid #ccc;
+            color  : #F97426;
+          }
+        }
+      }
+      .availability {
+      }
+      .price-box {
+        margin : 20px 0;
+      }
+      .add-to-box {
+        label {
+          color       : @list-font-color;
+          font-size   : 18px;
+          font-family : @title-font;
+          font-weight : 400;
+        }
+        .qty {
+          width   : 30%;
+          display : inline-block;
+        }
+        #product-addtocart-button {
+          background     : #079CB4;
+          color          : #fff;
+          height         : 40px;
+          float          : right;
+          font-weight    : 400;
+          font-family    : 'Martel';
+          border         : none;
+          padding        : 5px 60px;
+          font-size      : 18px;
+          text-transform : uppercase;
+          &:hover {
+            opacity : .8;
+          }
+        }
+        .loading {
+          width       : 16px;
+          height      : 16px;
+          display     : inline-block;
+          float       : right;
+          height      : 40px;
+          line-height : 40px;
+        }
+      }
+      .short-description {
+      }
+    }
+  }
+
+  .product-collateral {
+    .label {
+      color : #000;
+      font-size : 14px !important;
+      padding-left: 0px;
+      padding-right: 20px;
+    }
+    display         : flex;
+    flex-direction  : row;
+    justify-content : space-between;
+    .box-left {
+      width : calc(~' (100% - 100px) / 2');
+    }
+    .box-right {
+      width : calc(~' (100% - 100px) / 2');
+      .box-additional {
+        td, td {
+          font-size : 14px !important;
+        }
+      }
+      .box-use {
+      }
+      .box-Ingredients {
+      }
+    }
+
+    .box-collateral {
+      border-top     : 1px solid #ccc;
+      padding-bottom : 20px;
+      h2 {
+        font-family : @title-font;
+        font-size   : 18px;
+        &::before{
+
+        }
+        .iconfont{
+          float:right;
+          padding-right: 20px;
+        }
+      }
+      .panel-body {
+        padding : 0;
+      }
+    }
+  }
+  .box-up-sell{
+    h3{line-height: 12px;
+      height: 24px;padding:0;margin-top:0;
+
+    }
+    a,a:hover {
+      color: #4e4e4e;
+      font-size: 14px;
+      line-height: 14px;
+    }
+    h2 p{
+      text-align: center;
+      font-family: 'Martel';
+      font-size: 18px;
+      width: 60%;
+      margin: 0 auto;
+      transform: translateY(5px);
+      background: #fff;
+    }
+  }
+  .line{
+    height: 1px;
+    background: #D9D9D9;
+    position: relative;
+    top: 16px;
+  }
+
 }

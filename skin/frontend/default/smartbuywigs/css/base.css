@@ -87,6 +87,10 @@ img {
 .overflow-hide {
   overflow: hidden;
 }
+.icon-wujiaoxing {
+  color: #40B3C5;
+  font-size: 12px;
+}
 .header-container .header {
   margin-bottom: 20px;
 }
@@ -612,4 +616,167 @@ img {
   margin-bottom: 20px;
   width: calc(( 100% - 20px ) /2);
   padding: 0 15px;
+}
+.product-view {
+  color: #4e4e4e;
+}
+.product-view a,
+.product-view a:hover {
+  color: #4e4e4e;
+}
+.product-view .product-essential form {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+.product-view .product-essential form .product-img-box {
+  flex: 1;
+}
+.product-view .product-essential form .product-img-box .more-views ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+.product-view .product-essential form .product-shop {
+  flex: 1;
+}
+.product-view .product-essential form .product-shop h1 {
+  font-size: 28px;
+  font-family: 'Martel';
+}
+.product-view .product-essential form .product-shop .product-name {
+  font-family: 'Martel';
+  font-size: 18px;
+}
+.product-view .product-essential form .product-shop .short-description {
+  margin: 40px 0;
+}
+.product-view .product-essential form .product-shop .ratings {
+  font-size: 16px;
+}
+.product-view .product-essential form .product-shop .ratings .icon-wujiaoxing {
+  color: #FF9A00;
+  font-size: 12px;
+}
+.product-view .product-essential form .product-shop .wishlist {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.product-view .product-essential form .product-shop .wishlist .add-to-links {
+  flex: 1;
+}
+.product-view .product-essential form .product-shop .wishlist .ratings {
+  flex: 1;
+}
+.product-view .product-essential form .product-shop .add-to-links .icon-heart {
+  color: #F97426;
+  font-size: 20px;
+  padding-right: 10px;
+}
+.product-view .product-essential form .product-shop .add-to-links .link-wishlist {
+  padding: 0;
+  background: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-view .product-essential form .product-shop .add-to-links .link-wishlist:hover {
+  border: 1px solid #ccc;
+  color: #F97426;
+}
+.product-view .product-essential form .product-shop .price-box {
+  margin: 20px 0;
+}
+.product-view .product-essential form .product-shop .add-to-box {
+  margin-bottom: 10px;
+}
+.product-view .product-essential form .product-shop .add-to-box label {
+  color: #4e4e4e;
+  font-size: 18px;
+  font-family: 'Martel';
+  font-weight: 400;
+}
+.product-view .product-essential form .product-shop .add-to-box .qty {
+  width: 30%;
+  display: inline-block;
+}
+.product-view .product-essential form .product-shop .add-to-box #product-addtocart-button {
+  background: #079CB4;
+  color: #fff;
+  height: 34px;
+  float: right;
+  font-weight: 400;
+  font-family: 'Martel';
+  border: none;
+  padding: 5px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.product-view .product-essential form .product-shop .add-to-box #product-addtocart-button:hover {
+  opacity: .8;
+}
+.product-view .product-essential form .product-shop .add-to-box .loading {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  float: right;
+  height: 40px;
+  line-height: 40px;
+}
+.product-view .product-collateral {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product-view .product-collateral .label {
+  color: #000;
+  font-size: 14px !important;
+  padding-left: 0px;
+  padding-right: 20px;
+}
+.product-view .product-collateral .box-right .box-additional td,
+.product-view .product-collateral .box-right .box-additional td {
+  font-size: 14px !important;
+}
+.product-view .product-collateral .box-collateral {
+  border-top: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+.product-view .product-collateral .box-collateral h2 {
+  font-family: 'Martel';
+  font-size: 18px;
+}
+.product-view .product-collateral .box-collateral h2 .iconfont {
+  float: right;
+  padding-right: 20px;
+}
+.product-view .product-collateral .box-collateral .panel-body {
+  padding: 0;
+}
+.product-view .box-up-sell h3 {
+  line-height: 12px;
+  height: 24px;
+  padding: 0;
+  margin-top: 0;
+}
+.product-view .box-up-sell a,
+.product-view .box-up-sell a:hover {
+  color: #4e4e4e;
+  font-size: 14px;
+  line-height: 14px;
+}
+.product-view .box-up-sell h2 p {
+  text-align: center;
+  font-family: 'Martel';
+  font-size: 18px;
+  width: 90%;
+  margin: 0 auto;
+  transform: translateY(5px);
+  background: #fff;
+}
+.product-view .line {
+  height: 1px;
+  background: #D9D9D9;
+  position: relative;
+  top: 16px;
 }
