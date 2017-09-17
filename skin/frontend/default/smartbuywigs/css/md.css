@@ -184,9 +184,10 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
-  padding-bottom: 20px;
-  padding: 0 10%;
+  justify-content: space-between;
+  margin: 0;
+  padding-bottom: 10px;
+  padding: 0 15px;
 }
 #nav a {
   color: #353535;
@@ -197,11 +198,11 @@ img {
   font-weight: 400;
 }
 #nav .level0 ul.level0 {
-  position: absolute;
+  position: fixed;
+  left: 0;
+  top: 156px;
   padding: 0 10%;
   padding-top: 30px;
-  left: 0;
-  top: 20px;
   padding-bottom: 20px;
   z-index: 200;
   width: 100%;
@@ -242,7 +243,6 @@ img {
   font-size: 27px;
   font-family: 'martel';
   text-align: center;
-  padding: 15px 0;
   text-transform: uppercase;
   color: #555;
 }
@@ -254,6 +254,18 @@ img {
 }
 .category-block {
   padding-top: 20px;
+}
+.category-block .block-layered-nav .label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #4e4e4e;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
 }
 .category-block .block-layered-nav .block-title {
   color: #FF6C0C;

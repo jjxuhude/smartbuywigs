@@ -26,7 +26,7 @@
 ?>
 <?php if($this->getResultCount()): ?>
 <?php echo $this->getMessagesBlock()->toHtml() ?>
-<div class="page-title">
+<div class="page-title container">
     <?php if ($this->helper('rss/catalog')->getTagFeedUrl()): ?>
         <a href="<?php echo $this->helper('rss/catalog')->getTagFeedUrl() ?>" class="nobr link-rss"><?php echo $this->__('Subscribe to Feed') ?></a>
     <?php endif; ?>
