@@ -110,9 +110,11 @@
                             </div>
                         </form>
                     </div>
+                        <a href="<?php echo $this->getUrl('checkout/cart')?>">
                     <div class="checkout iconfont icon-gouwuche col-xs-2 col-md-4">
                         <i><?php echo Mage::getSingleton('checkout/session')->getQuote()->getItemsSummaryQty()?></i>
                     </div>
+                        </a>
                 </div>
             </div>
         </div>
