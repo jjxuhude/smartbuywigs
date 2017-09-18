@@ -183,9 +183,17 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
         <?php endif; ?>
     <?php endif; ?>
     <div class="a-center">
-        <input name="cart[<?php echo $_item->getId() ?>][qty]"
-               data-cart-item-id="<?php echo $this->jsQuoteEscape($_item->getSku()) ?>"
-               value="<?php echo $this->getQty() ?>" size="4" title="<?php echo $this->__('Qty') ?>" class="input-text qty" maxlength="12" />
+<!--        <input name="cart[--><?php //echo $_item->getId() ?><!--][qty]"-->
+<!--               data-cart-item-id="--><?php //echo $this->jsQuoteEscape($_item->getSku()) ?><!--"-->
+<!--               value="--><?php //echo $this->getQty() ?><!--" size="4" title="--><?php //echo $this->__('Qty') ?><!--" class="input-text qty" maxlength="12" />-->
+        <select onchange="jQuery(this).closest('form').submit();" name="cart[<?php echo $_item->getId() ?>][qty]"
+                data-cart-item-id="<?php echo $this->jsQuoteEscape($_item->getSku()) ?>"
+                class="input-text qty "
+        >
+            <?php foreach(range(1,10) as $val):?>
+            <option <?php echo $this->getQty()==$val?'selected':'' ?> value="<?php echo $val?>"><?php echo $val?></option>
+            <?php endforeach;?>
+        </select>
     </div>
 
     <!--Sub total starts here -->
