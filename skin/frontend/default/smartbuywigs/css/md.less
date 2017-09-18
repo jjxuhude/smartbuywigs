@@ -122,6 +122,7 @@
     color : #353535;
   }
   //
+  li.level0>a>span{font-size: 14px;text-transform: uppercase}
   .level0 {
     a {
       span {
@@ -529,7 +530,9 @@
 
 //购物车
 .cart {
-  button{border-radius: 5px;}
+  button {
+    border-radius : 5px;
+  }
   .page-title {
     display         : flex;
     flex-direction  : row;
@@ -685,10 +688,10 @@
         float   : left;
 
         button {
-          height      : 30px;
-          line-height : 30px;
-          padding     : 0 20px;
-          border-radius: 0;
+          height        : 30px;
+          line-height   : 30px;
+          padding       : 0 20px;
+          border-radius : 0;
         }
 
       }
@@ -704,9 +707,10 @@
       ul.checkout-types {
         width  : 50%;
         button : 100%;
-        li{width:100%;
-          button{
-            width:100%;
+        li {
+          width : 100%;
+          button {
+            width : 100%;
           }
         }
       }
@@ -747,3 +751,72 @@
   }
 }
 
+//customer
+.customer-top-title {
+  h2{font-size: 18px;}
+  .or {
+    text-align : center;
+    .line{
+      &::before{
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background: #ccc;
+        position: relative;top:15px;
+      }
+      span{
+        background: #fff;
+        position: relative;
+        z-index: 2;
+        padding: 15px;
+      }
+    }
+  }
+}
+
+.container.customer-wrap {
+  .validation-advice {
+    color : red;
+  }
+
+  h2 {
+    font-size : 16px
+  }
+  label {
+    font-size     : 14px;
+    font-weight   : 400;
+    margin-bottom : 0;
+  }
+  .field, .input-box {
+    margin-bottom : 5px;
+  }
+  em {
+    color         : red;
+    padding-right : 5px
+  }
+  margin-bottom  : 40px;
+  button {
+    float          : right;
+    height         : 40px;
+    line-height    : 40px;
+    padding        : 0 50px;
+    background     : @cart-btn-bg;
+    color          : #fff;
+    font-weight    : 400;
+    border         : none;
+    text-transform : uppercase;
+
+  }
+  display        : flex;
+  flex-direction : row;
+  .account-login {
+    flex          : 1;
+    padding-right : 20px;
+    border-right  : 1px solid #ccc;
+  }
+  .account-create {
+    flex         : 1;
+    padding-left : 20px;
+  }
+}

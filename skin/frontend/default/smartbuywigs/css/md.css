@@ -195,6 +195,10 @@ img {
 #nav a {
   color: #353535;
 }
+#nav li.level0 > a > span {
+  font-size: 14px;
+  text-transform: uppercase;
+}
 #nav .level0 a span {
   font-family: 'Martel', Georgia, "Times New Roman", Times, serif !important;
   color: #353535;
@@ -713,4 +717,69 @@ img {
   width: 100%;
   font-weight: 600;
   text-transform: uppercase;
+}
+.customer-top-title h2 {
+  font-size: 18px;
+}
+.customer-top-title .or {
+  text-align: center;
+}
+.customer-top-title .or .line::before {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  position: relative;
+  top: 15px;
+}
+.customer-top-title .or .line span {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  padding: 15px;
+}
+.container.customer-wrap {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.container.customer-wrap .validation-advice {
+  color: red;
+}
+.container.customer-wrap h2 {
+  font-size: 16px;
+}
+.container.customer-wrap label {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.container.customer-wrap .field,
+.container.customer-wrap .input-box {
+  margin-bottom: 5px;
+}
+.container.customer-wrap em {
+  color: red;
+  padding-right: 5px;
+}
+.container.customer-wrap button {
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 50px;
+  background: #079cb4;
+  color: #fff;
+  font-weight: 400;
+  border: none;
+  text-transform: uppercase;
+}
+.container.customer-wrap .account-login {
+  flex: 1;
+  padding-right: 20px;
+  border-right: 1px solid #ccc;
+}
+.container.customer-wrap .account-create {
+  flex: 1;
+  padding-left: 20px;
 }
