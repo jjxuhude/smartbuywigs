@@ -13,21 +13,18 @@ $helper = Mage::helper('onestepcheckout/checkout');
     <p><?php echo Mage::getStoreConfig('sales/minimum_order/description'); ?></p>
     <p><a href="<?php echo $this->getUrl(''); ?>"><?php echo $this->__('Back to homepage'); ?></a></p>
     <?php else: ?>
-    <p><?php echo $this->__('You need to have products in your cart to checkout, and your cart is empty.'); ?></p>
     <p><a href="<?php echo $this->getUrl(''); ?>"><?php echo $this->__('Back to homepage'); ?></a></p>
     <?php endif; ?>
 <?php else: ?>
 
-<form id="onestepcheckout-form" method="post" action="<?php echo $this->getUrl('onestepcheckout', array('_secure'=>true)); ?>">
+<form class="container" id="onestepcheckout-form" method="post" action="<?php echo $this->getUrl('onestepcheckout', array('_secure'=>true)); ?>">
 <fieldset class="group-select" style="margin: 0;">
 
 <?php if($this->settings['checkout_title']): ?>
     <h1 class="onestepcheckout-title"><?php echo $this->settings['checkout_title']; ?></h1>
 <?php endif; ?>
 
-<?php if($this->settings['checkout_description']): ?>
-    <p class="onestepcheckout-description"><?php echo $this->settings['checkout_description']; ?></p>
-<?php endif; ?>
+
 
 <?php if(!$this->isCustomerLoggedIn() && $helper->showLoginLink()): ?>
     <p class="onestepcheckout-login-link">

@@ -144,6 +144,7 @@ class Mage_Page_Block_Html_Topmenu extends Mage_Core_Block_Template
                 if (!empty($childrenWrapClass)) {
                     $html .= '<div class="' . $childrenWrapClass . '">';
                 }
+                $container=$childLevel==0?' container':'';
                 $html .= '<ul class="hidden level' . $childLevel . '">';
                 $html .= $this->_getHtml($child, $childrenWrapClass);
                 $html .= '</ul>';
