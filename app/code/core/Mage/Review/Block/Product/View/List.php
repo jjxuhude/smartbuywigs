@@ -64,4 +64,14 @@ class Mage_Review_Block_Product_View_List extends Mage_Review_Block_Product_View
     {
         return Mage::getUrl('review/product/view', array('id' => $id));
     }
+
+    public function getRatings()
+    {
+        $id=$this->getProductId();
+        $read = Mage::getModel('core/resource')->getConnection('core_read');
+        $sql="select list.*,rating.rating_code from 
+                (select rating_id,sum(`value`) as result, (count(*) * 5 )count from rating_option_vote where entity_pk_value = $id GROUP BY rating_id) as list 
+              JOIN rating ON rating.rating_id= list.rating_id ORDER BY rating_id ASC";
+        return $read->fetchAll($sql);
+    }
 }

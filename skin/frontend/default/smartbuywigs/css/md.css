@@ -392,8 +392,9 @@ img {
   flex: 1;
 }
 .product-view .product-essential form .product-shop h1 {
-  font-size: 28px;
+  font-size: 24px;
   font-family: 'Martel';
+  color: #000;
 }
 .product-view .product-essential form .product-shop .product-name {
   font-family: 'Martel';
@@ -782,4 +783,181 @@ img {
 .container.customer-wrap .account-create {
   flex: 1;
   padding-left: 20px;
+}
+.review-block .review-title {
+  text-align: center;
+}
+.review-block .review-title::before {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  position: relative;
+  top: 25px;
+}
+.review-block .review-title span {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  padding: 15px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: 'Martel';
+}
+.review-block .icon-wujiaoxing {
+  color: #FF9A00;
+}
+.review-block .general {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.review-block .general .overall {
+  text-align: center;
+  flex: 1;
+}
+.review-block .general .overall .icon-wujiaoxing {
+  font-size: 34px;
+}
+.review-block .general .overall .number {
+  font-size: 24px;
+}
+.review-block .general .overall button {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 50px;
+  background: #FF9A00;
+  color: #fff;
+  font-weight: 400;
+  border: none;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+.review-block .general .options-list {
+  flex: 1;
+}
+.review-block .general .options-list ul {
+  display: flex;
+  flex-direction: column;
+}
+.review-block .general .options-list ul > li dl dt {
+  font-family: 'Martel';
+  font-weight: 400;
+}
+.review-block .general .options-list ul > li dl dd {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.review-block .general .options-list ul > li dl dd .start {
+  color: rgba(7, 156, 180, 0.5);
+}
+.review-block .general .options-list ul > li dl dd .person {
+  position: relative;
+}
+.review-block .general .options-list ul > li dl dd .person em {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  color: #fff;
+  padding-left: 5px;
+  font-size: 12px;
+}
+.review-block .write .form-add h2 {
+  font-family: 'Martel';
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+.review-block .write .form-add h2::before {
+  content: "";
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+}
+.review-block .write .form-add h2 span {
+  padding: 0 40px;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+.review-block .write .form-add #review-form .validation-advice {
+  color: red;
+}
+.review-block .write .form-add #review-form button {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 50px;
+  background: #FF9A00;
+  color: #fff;
+  font-weight: 400;
+  border: none;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+.review-block .write .form-add #review-form fieldset #product-review-table tr th {
+  font-family: 'Martel';
+  font-size: 14px;
+  font-weight: 400;
+  padding-right: 40px;
+}
+.review-block .write .form-add #review-form fieldset #product-review-table tr td .icon-wujiaoxing {
+  font-size: 24px;
+  cursor: pointer;
+}
+.review-block .write .form-add #review-form fieldset ul li label {
+  font-family: 'Martel';
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+.review-block .write .form-add #review-form fieldset ul li label em {
+  color: red;
+  padding-right: 5px;
+}
+.review-block #customer-reviews h2 {
+  position: relative;
+  font-family: 'Martel';
+  font-weight: 400;
+  text-align: center;
+  font-size: 24px;
+}
+.review-block #customer-reviews h2::before {
+  content: "";
+  position: relative;
+  top: 15px;
+  z-index: 1;
+  height: 1px;
+  width: 100%;
+  display: block;
+  background: #ccc;
+  padding: 0 30px;
+}
+.review-block #customer-reviews h2 span {
+  background: #fff;
+  position: relative;
+  z-index: 2;
+  padding: 15px;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: 'Martel';
+}
+.review-block #customer-reviews dl dt,
+.review-block #customer-reviews dl th {
+  text-align: left;
+  font-family: 'Martel';
+  font-weight: 400;
+  font-size: 14px;
+  font-style: italic;
+}
+.review-block #customer-reviews dl th {
+  font-size: 12px;
+  padding-right: 40px;
 }
