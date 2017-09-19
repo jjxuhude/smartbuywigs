@@ -590,6 +590,7 @@
 
 //产品详情页面
 .product-view {
+  .zoom{display: none;}
   color : @list-font-color;
 
   a, a:hover {
@@ -1087,3 +1088,219 @@
   }
 
 }
+
+
+//评论
+.review-block {
+  .review-title {
+    text-align: center;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background: #ccc;
+      position: relative;
+      top: 25px;
+    }
+    span {
+      background: #fff;
+      position: relative;
+      z-index: 2;
+      padding:5px 15px;
+      font-weight: 400;
+      font-size: 18px;
+      font-family: @title-font;
+    }
+  }
+  .icon-wujiaoxing {
+    color: @view-start-bg;
+  }
+  .general {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    .overall {
+      text-align: center;
+      flex: 1;
+      .icon-wujiaoxing {
+        font-size: 34px;
+      }
+      .number {
+        font-size: 24px;
+      }
+      button {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 50px;
+        background: @view-start-bg;
+        color: #fff;
+        font-weight: 400;
+        border: none;
+        text-transform: uppercase;
+        margin: 0 auto;
+      }
+    }
+    .options-list {
+      flex: 1;
+      ul {
+        display: flex;
+        flex-direction: column;
+        > li {
+          dl {
+            dt {
+              font-family: @title-font;
+              font-weight: 400;
+            }
+            dd {
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: flex-start;
+              .start {
+                color: rgba(7, 156, 180, .5);
+              }
+              .person {
+                position: relative;
+                em {
+                  position: absolute;
+                  z-index: 2;
+                  top: 0;
+                  left: 0;
+                  color: #fff;
+                  padding-left: 5px;
+                  font-size: 12px;
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //發佈評論
+  .write {
+    //background: #eee;
+    .form-add {
+      h2 {
+        font-family: @title-font;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        &::before{
+          content: "";
+          position: relative;
+          top:20px;
+          display: inline-block;
+          width: 100%;
+          height: 1px;
+          background: #ccc;
+        }
+        span{
+          padding:0 40px;
+          background: #fff;
+          position: relative;
+          z-index: 2;
+        }
+      }
+      #review-form {
+        .validation-advice{color:red}
+        button {
+          height: 40px;
+          line-height: 40px;
+          padding: 0 50px;
+          background: @view-start-bg;
+          color: #fff;
+          font-weight: 400;
+          border: none;
+          text-transform: uppercase;
+          margin: 0 auto;
+        }
+        fieldset {
+          #input-message-box {
+          }
+          #product-review-table {
+            tr {
+              th {
+                font-family: @title-font;
+                font-size: 14px;
+                font-weight: 400;
+                padding-right: 40px;
+              }
+              td {
+                .icon-wujiaoxing{
+                  font-size: 24px;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+          ul{
+            li{
+              label{
+                font-family: @title-font;
+                font-size: 12px;
+                font-weight: 400;
+                padding:0;margin: 0;
+                em{color:red;padding-right: 5px;}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #customer-reviews {
+    h2 {
+      text-align: center;
+      position: relative;
+      font-family: @title-font;
+      font-weight: 400;
+      text-align: center;
+      font-size: 24px;
+      &::before {
+        content: "";
+        position: relative;
+        top: 15px;
+        z-index: 1;
+        height: 1px;
+        width: 100%;
+        display: block;
+        background: #ccc;
+        padding: 0 30px;
+      }
+      span {
+        background: #fff;
+        position: relative;
+        z-index: 2;
+        padding: 5px 15px;
+        font-weight: 400;
+        font-size: 18px;
+        font-family: 'Martel';
+      }
+    }
+    dl {
+      dt, th {
+        text-align: left;
+        font-family: @title-font;
+        font-weight: 400;
+        font-size: 14px;
+        font-style: italic;
+      }
+      th {
+        font-size: 12px;
+        padding-right: 40px;
+      }
+      dt {
+      }
+      dd {
+      }
+    }
+  }
+
+}
+
+
