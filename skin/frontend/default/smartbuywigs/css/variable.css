@@ -45,6 +45,10 @@ p {
 img {
   width: 100%;
 }
+.fotorama--fullscreen .fotorama__nav,
+.fotorama--fullscreen .fotorama__stage {
+  background: #fff;
+}
 #mask {
   position: fixed;
   z-index: 100;
@@ -90,4 +94,89 @@ img {
 .icon-wujiaoxing {
   color: #40B3C5;
   font-size: 12px;
+}
+.fotorama__arr.fotorama__arr--prev,
+.fotorama__arr.fotorama__arr--next {
+  background-image: none;
+}
+.fotorama__arr.fotorama__arr--prev:before {
+  font-family: "iconfont" !important;
+  font-size: 32px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e61a";
+}
+.fotorama__arr.fotorama__arr--next:before {
+  font-family: "iconfont" !important;
+  font-size: 32px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e643";
+}
+body.fullscreen .fotorama__fullscreen-icon {
+  background-image: none;
+  margin-right: 5px;
+}
+body.fullscreen .fotorama__fullscreen-icon::before {
+  font-family: "iconfont" !important;
+  font-size: 34px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\e60e";
+  color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(102, 175, 233, 0.4);
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+ul.messages > li.success-msg {
+  font-family: "iconfont" !important;
+  font-size: 14px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fff;
+  margin-top: 20px;
+  background: #e5efe5;
+  padding: 5px 32px;
+  position: relative;
+}
+ul.messages > li.success-msg::before {
+  content: "\e617";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 24px;
+}
+ul.messages > li.success-msg {
+  color: #006400;
+  border-color: #446423;
+  background-color: #eff5ea;
+}
+ul.messages > li.success-msg::before {
+  content: "\e617";
+}
+ul.messages > li.error-msg {
+  color: #df280a;
+  border-color: #f16048;
+  background-color: #faebe7;
+}
+ul.messages > li.error-msg::before {
+  content: "\e657";
+}
+ul.messages > li.note-msg,
+ul.messages > li.note-msg {
+  background-color: #fafaec;
+  border-color: #fcd344;
+  color: #3d6611;
+}
+ul.messages > li.note-msg::before,
+ul.messages > li.note-msg::before {
+  content: "\e676";
 }

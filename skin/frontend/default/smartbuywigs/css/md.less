@@ -414,40 +414,46 @@
         margin: 20px 0;
       }
       .add-to-box {
-        label {
-          color: @list-font-color;
-          font-size: 18px;
-          font-family: @title-font;
-          font-weight: 400;
-        }
-        .qty {
-          width: 30%;
-          display: inline-block;
-        }
-        #product-addtocart-button {
-          background: #079CB4;
-          color: #fff;
-          height: 34px;
-          width: auto;
-          float: right;
-          font-weight: 400;
-          font-family: 'Martel';
-          border: none;
-          padding: 5px 50px;
-          font-size: 18px;
-          text-transform: uppercase;
-          border-radius: 5px;
-          &:hover {
-            opacity: .8;
+        .add-to-cart {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+          flex-flow: row nowrap;
+          label {
+            color: @list-font-color;
+            font-size: 18px;
+            font-family: @title-font;
+            font-weight: 400;
           }
-        }
-        .loading {
-          width: 16px;
-          height: 16px;
-          display: inline-block;
-          float: right;
-          height: 40px;
-          line-height: 40px;
+          .qty {
+            width: 30%;
+            display: inline-block;
+          }
+          #product-addtocart-button {
+            background: #079CB4;
+            color: #fff;
+            height: 34px;
+            width: auto;
+            float: right;
+            font-weight: 400;
+            font-family: 'Martel';
+            border: none;
+            padding: 5px 5%;
+            font-size: 18px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            margin-top: 0;
+            &:hover {
+              opacity: .8;
+            }
+          }
+          .loading {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+          }
         }
       }
       .short-description {
@@ -845,10 +851,12 @@
       background: #fff;
       position: relative;
       z-index: 2;
-      padding:5px 15px;
+      padding: 5px 15px;
       font-weight: 400;
       font-size: 18px;
       font-family: @title-font;
+      display: inline-block;
+      width: 40%;
     }
   }
   .icon-wujiaoxing {
@@ -927,24 +935,28 @@
         font-size: 18px;
         font-weight: 400;
         text-align: center;
-        &::before{
+        &::before {
           content: "";
           position: relative;
-          top:20px;
+          top: 20px;
           display: inline-block;
           width: 100%;
           height: 1px;
           background: #ccc;
         }
-        span{
-          padding:0 40px;
+        span {
+          padding: 0 40px;
           background: #fff;
           position: relative;
           z-index: 2;
+          display: inline-block;
+          width: 40%;
         }
       }
       #review-form {
-        .validation-advice{color:red}
+        .validation-advice {
+          color: red
+        }
         button {
           height: 40px;
           line-height: 40px;
@@ -968,21 +980,25 @@
                 padding-right: 40px;
               }
               td {
-                .icon-wujiaoxing{
+                .icon-wujiaoxing {
                   font-size: 24px;
                   cursor: pointer;
                 }
               }
             }
           }
-          ul{
-            li{
-              label{
+          ul {
+            li {
+              label {
                 font-family: @title-font;
                 font-size: 12px;
                 font-weight: 400;
-                padding:0;margin: 0;
-                em{color:red;padding-right: 5px;}
+                padding: 0;
+                margin: 0;
+                em {
+                  color: red;
+                  padding-right: 5px;
+                }
               }
             }
           }
@@ -1018,6 +1034,8 @@
         font-weight: 400;
         font-size: 18px;
         font-family: 'Martel';
+        display: inline-block;
+        width: 40%;
       }
     }
     dl {
@@ -1033,6 +1051,9 @@
         padding-right: 40px;
       }
       dt {
+        p {
+          white-space: normal;
+        }
       }
       dd {
       }
