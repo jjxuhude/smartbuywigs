@@ -181,7 +181,7 @@
       position: relative;
       dd {
         font-size: 14px;
-        font-weight: 400px;
+        font-weight: 400;
         color: #353535;
       }
     }
@@ -266,7 +266,14 @@
   }
 }
 
+
 @media only screen and (max-width: 767px) {
+  .home-banner .nav{
+    justify-content: flex-end;
+    ul{
+      margin-right: 20px;
+    }
+  }
   .footer {
     address {
       padding: 0 15px;

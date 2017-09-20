@@ -365,7 +365,7 @@ ul.messages > li.note-msg::before {
 .home-content .now .slider dd,
 .home-content .new .slider dd {
   font-size: 14px;
-  font-weight: 400px;
+  font-weight: 400;
   color: #353535;
 }
 .home-content .footer-banner1 {
@@ -442,6 +442,12 @@ ul.messages > li.note-msg::before {
   font-size: 22px;
 }
 @media only screen and (max-width: 767px) {
+  .home-banner .nav {
+    justify-content: flex-end;
+  }
+  .home-banner .nav ul {
+    margin-right: 20px;
+  }
   .footer address {
     padding: 0 15px;
   }

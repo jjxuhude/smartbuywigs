@@ -29,7 +29,7 @@
         <?php if ($this->getRatingSummary()):?>
             <div class="rating-box">
                 <?php  $n = round($this->getRatingSummary() / 10/2 );$m=5-$n?>
-                <a href="<?php echo $this->getReviewsUrl() ?>"><?php echo $this->__('%d REVIEWS', $this->getReviewsCount()) ?></a>
+                <?php echo $this->__('%d REVIEWS', $this->getReviewsCount()) ?>
                 <?php for($i=0;$i<$n;$i++):?><span class="rating iconfont icon-wujiaoxing"></span><?php endfor;?><?php for($i=0;$i<$m;$i++):?><span class="rating iconfont icon-wujiaoxing" style="color:#ccc;"></span><?php endfor;?>
             </div>
         <?php endif;?>

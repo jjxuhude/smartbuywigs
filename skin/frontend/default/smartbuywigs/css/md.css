@@ -303,7 +303,9 @@ ul.messages > li.note-msg::before {
   padding-bottom: 20px;
   z-index: 200;
   width: 100%;
-  background: #fff;
+  background: #f5f5f5;
+  border-bottom: 1px solid #f4f4f4;
+  box-shadow: 1px 10px 10px 10px #f3f3f3;
   display: flex;
   justify-content: space-between;
 }
