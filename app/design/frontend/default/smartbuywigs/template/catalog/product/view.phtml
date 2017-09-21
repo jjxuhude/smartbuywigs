@@ -124,22 +124,23 @@
                     jQuery.post(form.action+"?ajax=1",jQuery(this.form).serialize(),function(response){
                         button.disabled = false;
                         if(response.status == true){
-                            var tital= 'Checkout Add Success';
-                            var content='<div>' +
-                                '<div class="message">message:'+response.message+'</div>' +
-                                '<div class="name">name:'+response.productInfo.name+'</div>' +
+                            var tital= response.message;
+                            var content='<div class="content-box">' +
                                 '<div class="img"><img src="'+response.productInfo.img+'"></div>' +
-                                '<div class="total">total:'+response.productInfo.total+'</div>' +
-                                '<div class="qty">qty:'+response.productInfo.qty+'</div>' +
-                                '<div class="cart_qty">qty:'+response.cart_qty+'</div>' +
-                                '</div>';
+                                '<div class="info"><div class="name">'+response.productInfo.name+'</div>' +
+                                '<div class="col2">'+
+                                    '<span class="qty">'+response.productInfo.qty+'</span>' +
+                                    '<span class="total">'+response.productInfo.total+'</span>'+
+                                 '</div>' +
+                                '</div></div>';
                             var buttons='<button type="button" class="btn btn-default" data-dismiss="modal">Continue Shopping</button>' +
                                 '<a href="<?php echo $this->getUrl('checkout/cart')?>" class="btn btn-primary">View Cart</a>';
 
-                            jQuery('.modal .modal-title').html(tital);
+                            jQuery('.modal .modal-title').addClass('success').html(tital);
                             jQuery('.modal .modal-body').html(content);
                             jQuery('.modal .modal-footer').html(buttons);
                             jQuery('.modal').modal({backdrop: 'static', keyboard: false});
+                            jQuery('.checkout.iconfont.icon-gouwuche>i').html(response.cart_qty);
                         }
                     },'json');
                 } catch (e) {

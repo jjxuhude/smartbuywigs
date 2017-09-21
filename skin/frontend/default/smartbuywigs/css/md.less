@@ -418,9 +418,9 @@
       .add-to-box {
         .add-to-cart {
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
           align-items: baseline;
-          flex-flow: row nowrap;
+          flex-flow: row wrap;
           label {
             color: @list-font-color;
             font-size: 18px;
@@ -431,6 +431,9 @@
             width: 30%;
             display: inline-block;
           }
+          .loading{
+            align-self: center;
+          }
           #product-addtocart-button {
             background: #079CB4;
             color: #fff;
@@ -440,8 +443,9 @@
             font-weight: 400;
             font-family: 'Martel';
             border: none;
-            padding: 5px 5%;
-            font-size: 18px;
+            padding: 5px 10%;
+
+            font-size: 14px;
             text-transform: uppercase;
             border-radius: 5px;
             margin-top: 0;
@@ -1062,5 +1066,11 @@
     }
   }
 
+}
+.modal-cell .modal-dialog .modal-content .modal-footer a, .modal-cell .modal-dialog .modal-content .modal-footer button {
+  margin: 0px 40px;
+}
+.modal-cell .modal-dialog .modal-content .modal-body .content-box div.info {
+  font-size: 16px;
 }
 

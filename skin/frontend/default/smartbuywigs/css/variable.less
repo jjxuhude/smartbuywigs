@@ -1,176 +1,259 @@
 @font-face {
-  font-family : "FontAwesome";
-  font-style  : normal;
-  font-weight : normal;
-  src         : url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  font-family: "FontAwesome";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
 }
 
 @font-face {
-  font-family   : "Martel";
-  font-style    : normal;
-  font-weight   : 400;
-  src           : local("Martel"), local("Martel-Regular"), url("https://fonts.gstatic.com/s/martel/v1/UqHF0_T0x2A12j9bgYu4DQ.woff2") format("woff2");
-  unicode-range : U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+  font-family: "Martel";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Martel"), local("Martel-Regular"), url("https://fonts.gstatic.com/s/martel/v1/UqHF0_T0x2A12j9bgYu4DQ.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
 @font-face {
-  font-family   : "Martel";
-  font-style    : normal;
-  font-weight   : 900;
-  src           : local("Martel Heavy"), local("Martel-Heavy"), url("https://fonts.gstatic.com/s/martel/v1/6qlcTvSyKvyk4OhhaCbMtltXRa8TVwTICgirnJhmVJw.woff2") format("woff2");
-  unicode-range : U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+  font-family: "Martel";
+  font-style: normal;
+  font-weight: 900;
+  src: local("Martel Heavy"), local("Martel-Heavy"), url("https://fonts.gstatic.com/s/martel/v1/6qlcTvSyKvyk4OhhaCbMtltXRa8TVwTICgirnJhmVJw.woff2") format("woff2");
+  unicode-range: U+0-FF, U+131, U+152-153, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
 //@font-face { font-family: "futura-pt"; font-style: normal; font-weight: 300; src: url("https://use.typekit.net/af/5da6f6/000000000000000000010096/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"), url("https://use.typekit.net/af/5da6f6/000000000000000000010096/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"), url("https://use.typekit.net/af/5da6f6/000000000000000000010096/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype"); }
 @font-face {
-  font-family : "futura-pt";
-  font-style  : normal;
-  font-weight : 400;
-  src         : url("https://use.typekit.net/af/3489f3/000000000000000000013365/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/3489f3/000000000000000000013365/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/3489f3/000000000000000000013365/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-family: "futura-pt";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://use.typekit.net/af/3489f3/000000000000000000013365/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"), url("https://use.typekit.net/af/3489f3/000000000000000000013365/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"), url("https://use.typekit.net/af/3489f3/000000000000000000013365/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
 }
 
 //@font-face { font-family: "futura-pt"; font-style: normal; font-weight: 700; src: url("https://use.typekit.net/af/e9d809/000000000000000000010091/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"), url("https://use.typekit.net/af/e9d809/000000000000000000010091/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"), url("https://use.typekit.net/af/e9d809/000000000000000000010091/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype"); }
 
 body {
-  font-family : 'futura-pt', "Martel", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size   : 14px;
-  line-height : 1.42857143;
-  color       : #333;
+  font-family: 'futura-pt', "Martel", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
 }
 
 a {
-  text-decoration : none;
+  text-decoration: none;
 }
 
-ul,ol{
-  list-style : none;
-  padding    : 0;
+ul, ol {
+  list-style: none;
+  padding: 0;
 }
 
 p {
-  padding : 0;
-  margin  : 0;
+  padding: 0;
+  margin: 0;
 }
 
 img {
-  width : 100%;
+  width: 100%;
 }
 
-@mask-background : #fff;
-@cart-modal-width : 500px;
-@cart-modal-height : 300px;
-@z-index-modal : 100;
+@mask-background: #fff;
+@cart-modal-width: 500px;
+@cart-modal-height: 300px;
+@z-index-modal: 100;
 
 //颜色
-@list-font-color:#4e4e4e;
-@list-font-size:14px;
-@title-font:'Martel';
+@list-font-color: #4e4e4e;
+@list-font-size: 14px;
+@title-font: 'Martel';
 
 @cart-btn-bg: #079cb4;
-@view-start-bg:#FF9A00;
+@view-start-bg: #FF9A00;
 .fotorama--fullscreen .fotorama__nav, .fotorama--fullscreen .fotorama__stage {
   background: #fff;
 }
 
 //模态
 #mask {
-  position   : fixed;
-  z-index    : @z-index-modal;
-  left       : 0;
-  top        : 0;
-  width      : 100%;
-  height     : 100%;
-  background : rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: @z-index-modal;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .modal-dialog {
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 .modal-table {
-  display : table;
-  width   : 100%;
-  height  : 100%;
+  display: table;
+  width: 100%;
+  height: 100%;
 }
 
 .modal-cell {
-  display        : table-cell;
-  vertical-align : middle;
+  display: table-cell;
+  vertical-align: middle;
+  img {
+    max-width: 110px;
+    min-width: 90px;
+  }
+  .modal-dialog {
+    min-width: 320px;
+    .modal-content {
+      .modal-header {
+        h4 {
+          margin: 0 auto;
+          font-family: @title-font;
+          font-size: 16px;
+          text-align: center;
+          text-transform: uppercase;
+          &::before{
+            font-family: "iconfont" !important;
+            font-size: 60px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: block;
+            width:60px;
+            height: 60px;
+            line-height: 60px;
+            margin: 0 auto;
+          }
+        }
+        h4.success{color: green; &::before{content: "\e617";}}
+        h4.error{color: red; &::before{content: "\e657";}}
+      }
+      .modal-body {
+        .content-box {
+          display: flex;
+          justify-content: space-between;
+          div.img{flex:1;}
+          div.info{flex:3;
+            font-size: 16px;
+            font-family: 'Martel';
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .col2{
+              display: flex;
+              justify-content: flex-start;
+              >span{
+                flex:1;
+              }
+            }
+          }
+        }
+      }
+      .modal-footer {
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        padding: 20px auto;
+        a,button{
+          height: 40px;
+          width:50%;
+          font-family: @title-font;
+          text-transform: uppercase;
+          line-height: 40px;
+          font-size: 14px;
+          padding:0;
+          margin: 0px 40px;
+        }
+        a{
+          background: @cart-btn-bg;
+          border: none;
+        }
+      }
+    }
+  }
 }
 
+//swiper
 .swiper-button-next, .swiper-button-prev {
-  background-image : none;
-  background-color: rgba(0,0,0,0.1);
+  background-image: none;
+  background-color: rgba(0, 0, 0, 0.1);
   top: 35%;
   font-size: 32px;
-  &:hover{background-color: rgba(0,0,0,0.5);color:#fff;}
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+  }
 }
 
 .swiper-button-next:before {
-  content : "\e643";
+  content: "\e643";
 }
 
 .swiper-button-prev:before {
-  content : "\e61a";
+  content: "\e61a";
 }
-.overflow-hide{
-  overflow:hidden;
+
+.overflow-hide {
+  overflow: hidden;
 }
 
 .icon-wujiaoxing {
-  color     : #40B3C5;
-  font-size : 12px;
+  color: #40B3C5;
+  font-size: 12px;
 }
 
-.fotorama__arr.fotorama__arr--prev,.fotorama__arr.fotorama__arr--next{
+.fotorama__arr.fotorama__arr--prev, .fotorama__arr.fotorama__arr--next {
   background-image: none;
 }
 
-.fotorama__arr.fotorama__arr--prev:before{
-  font-family:"iconfont" !important;
-  font-size:32px;
-  font-style:normal;
+.fotorama__arr.fotorama__arr--prev:before {
+  font-family: "iconfont" !important;
+  font-size: 32px;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content : "\e61a";
+  content: "\e61a";
 }
 
-
-.fotorama__arr.fotorama__arr--next:before{
-  font-family:"iconfont" !important;
-  font-size:32px;
-  font-style:normal;
+.fotorama__arr.fotorama__arr--next:before {
+  font-family: "iconfont" !important;
+  font-size: 32px;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content : "\e643";
+  content: "\e643";
 }
 
-.fotorama__fullscreen-icon{
+.fotorama__fullscreen-icon {
 
 }
-body.fullscreen .fotorama__fullscreen-icon{
+
+body.fullscreen .fotorama__fullscreen-icon {
   background-image: none;
-  &::before{
-    font-family:"iconfont" !important;
-    font-size:34px;
-    font-style:normal;
+  &::before {
+    font-family: "iconfont" !important;
+    font-size: 34px;
+    font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     content: "\e60e";
-    color: rgba(0,0,0,0.3);
-    border:1px solid rgba(102, 175, 233,.4);
+    color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(102, 175, 233, .4);
     outline: 0;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
   }
   margin-right: 5px;
 
 }
 
+.loading{
+  //background: transparent url('../images/opc-ajax-loader.gif') no-repeat center center !important;
+}
+
 //message
 ul.messages > li.success-msg {
-  font-family:"iconfont" !important;
-  font-size:14px;
-  font-style:normal;
+  font-family: "iconfont" !important;
+  font-size: 14px;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #fff;
@@ -179,13 +262,13 @@ ul.messages > li.success-msg {
   background: #e5efe5;
   padding: 5px 32px;
   position: relative;
-  &::before{
+  &::before {
     content: "\e617";
     display: inline-block;
     position: absolute;
-    left:0;
-    top:0;
-    width:32px;
+    left: 0;
+    top: 0;
+    width: 32px;
     height: 32px;
     line-height: 32px;
     font-size: 24px;
@@ -194,27 +277,27 @@ ul.messages > li.success-msg {
 
 ul.messages > li.success-msg {
   color: #006400;
-  border-color:#446423;
-  background-color:#eff5ea;
-  &::before{
+  border-color: #446423;
+  background-color: #eff5ea;
+  &::before {
     content: "\e617";
   }
 }
 
 ul.messages > li.error-msg {
-  color:#df280a;
-  border-color:#f16048;
-  background-color:#faebe7;
-  &::before{
+  color: #df280a;
+  border-color: #f16048;
+  background-color: #faebe7;
+  &::before {
     content: "\e657";
   }
 }
 
-ul.messages > li.note-msg,ul.messages > li.note-msg{
-  background-color:#fafaec;
-  border-color:#fcd344;
+ul.messages > li.note-msg, ul.messages > li.note-msg {
+  background-color: #fafaec;
+  border-color: #fcd344;
   color: #3d6611;
-  &::before{
+  &::before {
     content: "\e676";
   }
 }

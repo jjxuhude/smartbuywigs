@@ -70,6 +70,88 @@ img {
   display: table-cell;
   vertical-align: middle;
 }
+.modal-cell img {
+  max-width: 110px;
+  min-width: 90px;
+}
+.modal-cell .modal-dialog {
+  min-width: 320px;
+}
+.modal-cell .modal-dialog .modal-content .modal-header h4 {
+  margin: 0 auto;
+  font-family: 'Martel';
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.modal-cell .modal-dialog .modal-content .modal-header h4::before {
+  font-family: "iconfont" !important;
+  font-size: 60px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+}
+.modal-cell .modal-dialog .modal-content .modal-header h4.success {
+  color: green;
+}
+.modal-cell .modal-dialog .modal-content .modal-header h4.success::before {
+  content: "\e617";
+}
+.modal-cell .modal-dialog .modal-content .modal-header h4.error {
+  color: red;
+}
+.modal-cell .modal-dialog .modal-content .modal-header h4.error::before {
+  content: "\e657";
+}
+.modal-cell .modal-dialog .modal-content .modal-body .content-box {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-cell .modal-dialog .modal-content .modal-body .content-box div.img {
+  flex: 1;
+}
+.modal-cell .modal-dialog .modal-content .modal-body .content-box div.info {
+  flex: 3;
+  font-size: 16px;
+  font-family: 'Martel';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modal-cell .modal-dialog .modal-content .modal-body .content-box div.info .col2 {
+  display: flex;
+  justify-content: flex-start;
+}
+.modal-cell .modal-dialog .modal-content .modal-body .content-box div.info .col2 > span {
+  flex: 1;
+}
+.modal-cell .modal-dialog .modal-content .modal-footer {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 20px auto;
+}
+.modal-cell .modal-dialog .modal-content .modal-footer a,
+.modal-cell .modal-dialog .modal-content .modal-footer button {
+  height: 40px;
+  width: 50%;
+  font-family: 'Martel';
+  text-transform: uppercase;
+  line-height: 40px;
+  font-size: 14px;
+  padding: 0;
+  margin: 0px 40px;
+}
+.modal-cell .modal-dialog .modal-content .modal-footer a {
+  background: #079cb4;
+  border: none;
+}
 .swiper-button-next,
 .swiper-button-prev {
   background-image: none;

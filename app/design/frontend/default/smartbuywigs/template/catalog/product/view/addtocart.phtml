@@ -36,7 +36,7 @@
                 <?php endforeach;?>
             </select>
         <?php endif; ?>
-        <div class="loading hidden"><img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif')?>" /></div>
+        <div class="loading "><img  class="hidden" src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif')?>" /></div>
         <button type="button" title="<?php echo $buttonTitle ?>" id="product-addtocart-button" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
         <?php echo $this->getChildHtml('', true, true) ?>
     </div>

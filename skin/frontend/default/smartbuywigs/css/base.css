@@ -70,6 +70,88 @@ img {
   display: table-cell;
   vertical-align: middle;
 }
+.modal-cell img {
+  max-width: 110px;
+  min-width: 90px;
+}
+.modal-cell .modal-dialog {
+  min-width: 320px;
+}
+.modal-cell .modal-dialog .modal-content .modal-header h4 {
+  margin: 0 auto;
+  font-family: 'Martel';
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.modal-cell .modal-dialog .modal-content .modal-header h4::before {
+  font-family: "iconfont" !important;
+  font-size: 60px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 auto;
+}
+.modal-cell .modal-dialog .modal-content .modal-header h4.success {
+  color: green;
+}
+.modal-cell .modal-dialog .modal-content .modal-header h4.success::before {
+  content: "\e617";
+}
+.modal-cell .modal-dialog .modal-content .modal-header h4.error {
+  color: red;
+}
+.modal-cell .modal-dialog .modal-content .modal-header h4.error::before {
+  content: "\e657";
+}
+.modal-cell .modal-dialog .modal-content .modal-body .content-box {
+  display: flex;
+  justify-content: space-between;
+}
+.modal-cell .modal-dialog .modal-content .modal-body .content-box div.img {
+  flex: 1;
+}
+.modal-cell .modal-dialog .modal-content .modal-body .content-box div.info {
+  flex: 3;
+  font-size: 16px;
+  font-family: 'Martel';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modal-cell .modal-dialog .modal-content .modal-body .content-box div.info .col2 {
+  display: flex;
+  justify-content: flex-start;
+}
+.modal-cell .modal-dialog .modal-content .modal-body .content-box div.info .col2 > span {
+  flex: 1;
+}
+.modal-cell .modal-dialog .modal-content .modal-footer {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 20px auto;
+}
+.modal-cell .modal-dialog .modal-content .modal-footer a,
+.modal-cell .modal-dialog .modal-content .modal-footer button {
+  height: 40px;
+  width: 50%;
+  font-family: 'Martel';
+  text-transform: uppercase;
+  line-height: 40px;
+  font-size: 14px;
+  padding: 0;
+  margin: 0px 40px;
+}
+.modal-cell .modal-dialog .modal-content .modal-footer a {
+  background: #079cb4;
+  border: none;
+}
 .swiper-button-next,
 .swiper-button-prev {
   background-image: none;
@@ -215,9 +297,9 @@ ul.messages > li.note-msg::before {
 }
 .header-container .mobile-nav .btns .logo {
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 24px;
   padding: 10px 0;
-  line-height: 30px;
+  line-height: 24px;
 }
 .header-container .mobile-nav .btns .logo a,
 .header-container .mobile-nav .btns .logo a:hover,
@@ -594,11 +676,23 @@ ul.messages > li.note-msg::before {
 .breadcrumbs ul {
   display: flex;
   justify-content: flex-start;
+  flex-flow: row nowrap;
   font-family: 'Martel';
   text-transform: uppercase;
   font-size: 12px;
   margin-bottom: 0;
   margin-top: 20px;
+}
+.breadcrumbs ul li {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+}
+.breadcrumbs ul li i {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 .page-title {
   font-family: 'Martel';
@@ -671,7 +765,7 @@ ul.messages > li.note-msg::before {
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
-  min-width: 320px;
+  min-width: 290px;
 }
 .category-products ol#products-list li {
   margin-bottom: 10px;
@@ -818,10 +912,9 @@ ul.messages > li.note-msg::before {
 }
 .product-view .product-essential form .product-shop .add-to-box .loading {
   width: 16px;
-  height: 16px;
   display: block;
-  height: 40px;
-  line-height: 40px;
+  height: 16px;
+  line-height: 16px;
   margin: 0 auto;
 }
 .product-view .product-collateral {
@@ -900,6 +993,29 @@ ul.messages > li.note-msg::before {
     height: 40px;
     line-height: 40px;
     text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  .cart .page-title h1 a {
+    font-size: 12px;
+    flex: 1;
+    display: inline-block;
+    color: transparent;
+    width: 12px;
+  }
+  .cart .page-title h1 a::before {
+    color: #000;
+    font-family: "iconfont" !important;
+    font-size: 32px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e61a";
+  }
+  .cart .page-title h1 span {
+    flex: 4;
+    text-align: right;
   }
   .cart .page-title ul li button {
     height: 40px;
@@ -911,6 +1027,10 @@ ul.messages > li.note-msg::before {
     border: none;
     text-transform: uppercase;
     width: 100%;
+  }
+  .cart form {
+    border: 1px solid #f5f5f5;
+    box-shadow: 0 0 10px 5px #f5f5f5;
   }
   .cart #shopping-cart-table a,
   .cart #shopping-cart-table a:hover {
@@ -966,7 +1086,7 @@ ul.messages > li.note-msg::before {
   .cart #shopping-cart-table .tbody .tr .remove a {
     color: transparent;
   }
-  .cart #shopping-cart-table .tbody .tr .remove:before {
+  .cart #shopping-cart-table .tbody .tr .remove a:before {
     content: "\e620";
     font-family: "iconfont" !important;
     font-size: 16px;
@@ -977,6 +1097,7 @@ ul.messages > li.note-msg::before {
     margin: 0 auto;
     width: 16px;
     cursor: pointer;
+    color: #000;
   }
   .cart #shopping-cart-table .tbody .tr .product_image {
     flex: 1;
@@ -1344,4 +1465,13 @@ ul.messages > li.note-msg::before {
 .review-block #customer-reviews dl th {
   font-size: 12px;
   padding-right: 40px;
+}
+.modal-cell .modal-dialog .modal-content .modal-footer a,
+.modal-cell .modal-dialog .modal-content .modal-footer button {
+  margin: -1px 5px;
+  font-size: 12px;
+  padding: 0 5px;
+}
+.modal-cell .modal-dialog .modal-content .modal-body .content-box div.info {
+  font-size: 12px;
 }

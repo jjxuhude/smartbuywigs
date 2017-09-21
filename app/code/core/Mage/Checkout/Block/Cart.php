@@ -132,6 +132,7 @@ class Mage_Checkout_Block_Cart extends Mage_Checkout_Block_Cart_Abstract
 
     public function getContinueShoppingUrl()
     {
+        return $_SERVER['HTTP_REFERER']?:Mage::getUrl();
         $url = $this->getData('continue_shopping_url');
         if (is_null($url)) {
             $url = Mage::getSingleton('checkout/session')->getContinueShoppingUrl(true);
@@ -140,7 +141,8 @@ class Mage_Checkout_Block_Cart extends Mage_Checkout_Block_Cart_Abstract
             }
             $this->setData('continue_shopping_url', $url);
         }
-        return $url;
+
+        //return $url;
     }
 
     public function getIsVirtual()
