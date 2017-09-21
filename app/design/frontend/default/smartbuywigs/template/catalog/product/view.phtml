@@ -121,6 +121,7 @@
                 try {
                     //this.form.submit();
                     button.disabled = true;
+	                jQuery(button).addClass('bg_loading');
                     jQuery.post(form.action+"?ajax=1",jQuery(this.form).serialize(),function(response){
                         button.disabled = false;
                         if(response.status == true){
@@ -142,6 +143,7 @@
                             jQuery('.modal').modal({backdrop: 'static', keyboard: false});
                             jQuery('.checkout.iconfont.icon-gouwuche>i').html(response.cart_qty);
                         }
+	                    jQuery(button).removeClass('bg_loading');
                     },'json');
                 } catch (e) {
                 }

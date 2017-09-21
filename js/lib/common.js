@@ -1,14 +1,14 @@
-jQuery(document).ajaxSend(function (){
+jQuery(document).ajaxSend(function (event, jqxhr, settings){
     console.log('ajaxSend');
-    jQuery('div.loading').removeClass('hidden');
+//    jQuery('.ajax-btn').addClass('bg_loading');
 });
-jQuery(document).ajaxComplete(function (){
-    jQuery('div.loading').addClass('hidden');
+jQuery(document).ajaxComplete(function (e){
+//    jQuery('.ajax-btn').removeClass('bg_loading');
     console.log('ajaxComplete');
 });
 
 function ajaxAddToCart(url,button){
-    jQuery(button).addClass('loading');
+    jQuery(button).addClass('bg_loading');
     button.disabled = true;
     jQuery.post(url+"?ajax=1",{},function(response){
         if(response.status == true){
@@ -29,7 +29,7 @@ function ajaxAddToCart(url,button){
             jQuery('.modal .modal-footer').html(buttons);
             jQuery('.modal').modal({backdrop: 'static', keyboard: false});
             jQuery('.checkout.iconfont.icon-gouwuche>i').html(response.cart_qty);
-            jQuery(button).removeClass('loading');
+            jQuery(button).removeClass('bg_loading');
             button.disabled = false;
         }
     },'json');

@@ -213,9 +213,13 @@ body.fullscreen .fotorama__fullscreen-icon::before {
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-.loading {
+.bg_loading {
+  border: 1px solid #ccc !important;
   color: transparent !important;
-  background: transparent url('../images/opc-ajax-loader.gif') no-repeat center center !important;
+  background-color: transparent !important;
+  background-image: url('../images/opc-ajax-loader.gif') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center  !important;
 }
 ul.messages > li.success-msg {
   font-family: "iconfont" !important;
@@ -618,7 +622,7 @@ ul.messages > li.note-msg::before {
 }
 .product-view .product-essential form .product-shop .add-to-box .add-to-cart {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: baseline;
   flex-flow: row wrap;
 }
@@ -644,7 +648,7 @@ ul.messages > li.note-msg::before {
   font-weight: 400;
   font-family: 'Martel';
   border: none;
-  padding: 5px 10%;
+  padding: 5px 40px;
   font-size: 14px;
   text-transform: uppercase;
   border-radius: 5px;
