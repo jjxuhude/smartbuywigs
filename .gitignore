@@ -43,4 +43,5 @@ atlassian*
 !/pub/static/.htaccess
 
 /var
+/media
 !/var/.htaccess
