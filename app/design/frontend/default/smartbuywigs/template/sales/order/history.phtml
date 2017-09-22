@@ -24,6 +24,9 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
+<div class="sales_order_history">
+
+
 <?php echo $this->getMessagesBlock()->toHtml() ?>
 <?php $_orders = $this->getOrders(); ?>
 <div class="page-title">
@@ -31,13 +34,7 @@
 </div>
 <?php echo $this->getPagerHtml(); ?>
 <?php if($_orders->getSize()): ?>
-<table class="data-table" id="my-orders-table">
-    <col width="1" />
-    <col width="1" />
-    <col />
-    <col width="1" />
-    <col width="1" />
-    <col width="1" />
+<table class="data-table table table-responsive" id="my-orders-table">
     <thead>
         <tr>
             <th><?php echo $this->__('Order #') ?></th>
@@ -74,3 +71,4 @@
 <?php else: ?>
     <p><?php echo $this->__('You have placed no orders.'); ?></p>
 <?php endif ?>
+</div>

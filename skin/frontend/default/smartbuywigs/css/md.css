@@ -1167,3 +1167,242 @@ ul.messages > li.note-msg::before {
 .modal-cell .modal-dialog .modal-content .modal-body .content-box div.info {
   font-size: 16px;
 }
+.main-container.col1-layout .main .col-main .my-account.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.main-container.col1-layout .main .col-main .my-account.container h2,
+.main-container.col1-layout .main .col-main .my-account.container h1 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #079cb4;
+  font-family: 'Martel';
+}
+.main-container.col1-layout .main .col-main .my-account.container h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #079cb4;
+  font-family: 'Martel';
+}
+.main-container.col1-layout .main .col-main .my-account.container input[type='text'],
+.main-container.col1-layout .main .col-main .my-account.container select {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.main-container.col1-layout .main .col-main .my-account.container input[type='text']:active,
+.main-container.col1-layout .main .col-main .my-account.container select:active {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.main-container.col1-layout .main .col-main .my-account.container input[type='text']:focus,
+.main-container.col1-layout .main .col-main .my-account.container select:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.main-container.col1-layout .main .col-main .my-account.container button {
+  background: #079cb4;
+  color: #fff;
+  height: 34px;
+  width: auto;
+  float: right;
+  font-weight: 400;
+  font-family: 'Martel';
+  border: none;
+  padding: 5px 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.main-container.col1-layout .main .col-main .my-account.container button:hover {
+  opacity: .8;
+}
+.main-container.col1-layout .main .col-main .my-account.container label {
+  font-family: 'Martel';
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 400;
+}
+.main-container.col1-layout .main .col-main .my-account.container em,
+.main-container.col1-layout .main .col-main .my-account.container .validation-advice {
+  color: red;
+}
+.main-container.col1-layout .main .col-main .my-account.container .block.block-account {
+  flex: 1;
+  padding: 20px 0 0 0;
+  font-family: 'Martel';
+  text-transform: uppercase;
+}
+.main-container.col1-layout .main .col-main .my-account.container .block.block-account .block-title {
+  border-bottom: 1px solid #ccc;
+  margin-right: 40px;
+  font-weight: 600;
+}
+.main-container.col1-layout .main .col-main .my-account.container .block.block-account .block-title strong {
+  font-weight: 400;
+  color: #333;
+}
+.main-container.col1-layout .main .col-main .my-account.container .block.block-account .block-content {
+  margin: 5px 40px 0 0px;
+}
+.main-container.col1-layout .main .col-main .my-account.container .block.block-account .block-content strong {
+  font-weight: 400;
+}
+.main-container.col1-layout .main .col-main .my-account.container .block.block-account .block-content ul {
+  box-shadow: 0 1px 10px 10px #f5f5f5;
+}
+.main-container.col1-layout .main .col-main .my-account.container .block.block-account .block-content ul li {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  color: #000;
+  padding-left: 20px;
+}
+.main-container.col1-layout .main .col-main .my-account.container .block.block-account .block-content ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.main-container.col1-layout .main .col-main .my-account.container .block.block-account .block-content ul li a:hover {
+  color: #079cb4;
+}
+.main-container.col1-layout .main .col-main .my-account.container .block.block-account .block-content ul li.current {
+  color: #079cb4;
+}
+.main-container.col1-layout .main .col-main .my-account.container .customer_newsletter,
+.main-container.col1-layout .main .col-main .my-account.container .dashboard,
+.main-container.col1-layout .main .col-main .my-account.container .customer_account_edit,
+.main-container.col1-layout .main .col-main .my-account.container .customer_address_book,
+.main-container.col1-layout .main .col-main .my-account.container .customer_address_edit,
+.main-container.col1-layout .main .col-main .my-account.container .sales_order_history,
+.main-container.col1-layout .main .col-main .my-account.container .wishlist_view,
+.main-container.col1-layout .main .col-main .my-account.container .customer_newsletter,
+.main-container.col1-layout .main .col-main .my-account.container .customer_order_view {
+  flex: 3;
+}
+.main-container.col1-layout .main .col-main .my-account.container .dashboard .page-title h1 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #079cb4;
+  text-transform: capitalize;
+}
+.main-container.col1-layout .main .col-main .my-account.container .dashboard .welcome-msg {
+  border: 1px solid #333;
+  padding: 20px;
+}
+.main-container.col1-layout .main .col-main .my-account.container .dashboard .welcome-msg p {
+  height: auto;
+  line-height: 20px;
+}
+.main-container.col1-layout .main .col-main .my-account.container .dashboard .welcome-msg p strong {
+  font-weight: 400;
+}
+.main-container.col1-layout .main .col-main .my-account.container .dashboard .box-account .col2-set {
+  background: #f8f8f8;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+.main-container.col1-layout .main .col-main .my-account.container .customer_account_edit form {
+  padding: 15px;
+  padding: 0;
+}
+.main-container.col1-layout .main .col-main .my-account.container .customer_account_edit .fieldset {
+  margin-bottom: 20px;
+  background: #f8f8f8;
+  padding: 10px 20px;
+}
+.main-container.col1-layout .main .col-main .my-account.container .customer_account_edit .fieldset #dummy {
+  margin-bottom: 5px;
+}
+.main-container.col1-layout .main .col-main .my-account.container .customer_address_edit .form-list {
+  margin-bottom: 20px;
+  background: #f8f8f8;
+  padding: 10px 20px;
+}
+.main-container.col1-layout .main .col-main .my-account.container .customer_address_edit .form-list #street_1 {
+  margin-bottom: 5px;
+}
+.main-container.col1-layout .main .col-main .my-account.container .customer_order_view .col2-set h2 {
+  padding: 0;
+  margin: 0;
+}
+.main-container.col1-layout .main .col-main .my-account.container .customer_order_view .order-items img {
+  min-width: 75px;
+  max-width: 90px;
+}
+.main-container.col1-layout .main .col-main .my-account.container .customer_order_view .order-items h3 {
+  margin: 0;
+  padding: 0;
+}
+.main-container.col1-layout .main .col-main .my-account.container .customer_order_view .order-items td {
+  vertical-align: middle;
+}
+.main-container.col1-layout .main .col-main .my-account.container .customer_order_view .address-cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.success-title h1 {
+  text-align: center;
+}
+.sub-title.container {
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Martel';
+}
+.success.container {
+  text-align: center;
+  font-weight: 400;
+}
+p.increment_id {
+  display: inline-block;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: 1px #CDB8A1 dashed;
+  background: #F9F0EA;
+  padding: 5px 20px;
+}
+.success-button {
+  background: #079cb4;
+  color: #fff;
+  height: 34px;
+  width: auto;
+  font-weight: 400;
+  font-family: 'Martel';
+  border: none;
+  padding: 5px 40px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+.success-button:hover {
+  opacity: .8;
+}
+.success-icon {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  color: green;
+  padding: 0;
+  margin: 0;
+  font-size: 60px;
+}

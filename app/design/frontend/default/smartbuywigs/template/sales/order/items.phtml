@@ -25,14 +25,10 @@
  */
 ?>
 <?php  $_order = $this->getOrder() ?>
-<table class="data-table" id="my-orders-table" summary="<?php echo Mage::helper('core')->quoteEscape($this->__('Items Ordered')) ?>">
-    <col />
-    <col width="1" />
-    <col width="1" />
-    <col width="1" />
-    <col width="1" />
+<table class="data-table table table-responsive" id="my-orders-table" summary="<?php echo Mage::helper('core')->quoteEscape($this->__('Items Ordered')) ?>">
     <thead>
         <tr>
+            <th><?php echo $this->__('Product image') ?></th>
             <th><?php echo $this->__('Product Name') ?></th>
             <th><?php echo $this->__('SKU') ?></th>
             <th class="a-right"><?php echo $this->__('Price') ?></th>

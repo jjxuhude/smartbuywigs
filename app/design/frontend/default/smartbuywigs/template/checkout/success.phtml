@@ -24,15 +24,20 @@
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<div class="page-title">
+<div class="page-title container success-title">
     <h1><?php echo $this->__('Your order has been received.') ?></h1>
 </div>
+<div class="container">
 <?php echo $this->getMessagesBlock()->toHtml() ?>
-<h2 class="sub-title"><?php echo $this->__('Thank you for your purchase!') ?></h2>
+</div>
+<i class="iconfont icon-success success-icon"></i>
+<h2 class="sub-title container iconfont icon-success"><?php echo $this->__('Thank you for your purchase!') ?></h2>
+
+<div class="success container">
 
 <?php if ($this->getOrderId()):?>
 <?php if ($this->getCanViewOrder()) :?>
-    <p><?php echo $this->__('Your order # is: %s.', sprintf('<a href="%s">%s</a>', $this->escapeHtml($this->getViewOrderUrl()), $this->escapeHtml($this->getOrderId()))) ?></p>
+    <p class="increment_id"><?php echo $this->__('Your order # is: %s.', sprintf('<a class="" href="%s">%s</a>', $this->escapeHtml($this->getViewOrderUrl()), $this->escapeHtml($this->getOrderId()))) ?></p>
 <?php  else :?>
     <p><?php echo $this->__('Your order # is: %s.', $this->escapeHtml($this->getOrderId())) ?></p>
 <?php endif;?>
@@ -60,5 +65,6 @@
 <?php endif;?>
 
 <div class="buttons-set">
-    <button type="button" class="button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Continue Shopping')) ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+    <button type="button" class="success-button" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Continue Shopping')) ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+</div>
 </div>
