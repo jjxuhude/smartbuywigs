@@ -3,9 +3,10 @@ $_coreHelper = $this->helper('core');
 $checkoutHelper = Mage::helper('onestepcheckout/checkout');
 ?>
 
-<table class="onestepcheckout-summary">
+<table class="onestepcheckout-summary table table-responsive">
     <thead>
         <tr>
+            <th class="image"><?php echo $this->__('Image'); ?></th>
             <th class="name"><?php echo $this->__('Product'); ?></th>
             <th class="qty"><?php echo $this->__('Qty'); ?></th>
             <th class="total"><?php echo $this->__('Subtotal'); ?></th>
@@ -13,6 +14,7 @@ $checkoutHelper = Mage::helper('onestepcheckout/checkout');
     </thead>
     <?php foreach($this->getItems() as $item): ?>
     <tr>
+        <td><img src="<?php echo $this->helper('catalog/image')->init($item->getProduct(),'thumbnail')->resize(90)?>" /></td>
         <td class="name">
             <?php echo $item->getName(); ?>
             <?php if($checkoutHelper->settings['show_custom_options']): ?>

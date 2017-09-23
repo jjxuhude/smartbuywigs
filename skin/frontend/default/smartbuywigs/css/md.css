@@ -1406,3 +1406,93 @@ p.increment_id {
   margin: 0;
   font-size: 60px;
 }
+@media screen and (min-width: 992px) {
+  #onestepcheckout-login-popup p.close,
+  #onestepcheckout-toc-popup p.close {
+    bottom: 10px;
+  }
+  .validation-advice {
+    color: red;
+  }
+  button#onestepcheckout-place-order {
+    background: #079cb4 !important;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .orange.onestepcheckout-button,
+  .orange.onestepcheckout-button:visited {
+    background: #079cb4 !important;
+  }
+  #onestepcheckout-form .group-select > .onestepcheckout-threecolumns {
+    display: flex;
+    flex-direction: column;
+  }
+  #onestepcheckout-form .group-select > .onestepcheckout-threecolumns select {
+    width: 100%;
+  }
+  #onestepcheckout-form .group-select > .onestepcheckout-threecolumns .input-address input,
+  #onestepcheckout-form .group-select > .onestepcheckout-threecolumns .input-city input,
+  #onestepcheckout-form .group-select > .onestepcheckout-threecolumns .input-postcode input {
+    width: 100%;
+  }
+  #onestepcheckout-form .group-select > .onestepcheckout-threecolumns .onestepcheckout-column-left {
+    border: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: none;
+  }
+  #onestepcheckout-form .group-select > .onestepcheckout-threecolumns .onestepcheckout-column-middle {
+    border: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: none;
+  }
+  #onestepcheckout-form .group-select > .onestepcheckout-threecolumns .onestepcheckout-column-right {
+    border: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: none;
+  }
+  #onestepcheckout-form div.checkoutcontainer div.input-address-short,
+  #onestepcheckout-form div.checkoutcontainer div.input-firstname,
+  #onestepcheckout-form div.checkoutcontainer div.input-lastname,
+  #onestepcheckout-form div.checkoutcontainer div.input-email,
+  #onestepcheckout-form div.checkoutcontainer div.input-telephone,
+  #onestepcheckout-form div.checkoutcontainer div.input-company,
+  #onestepcheckout-form div.checkoutcontainer div.input-fax,
+  #onestepcheckout-form div.checkoutcontainer div.input-password {
+    width: 100%;
+    float: none;
+  }
+  #onestepcheckout-form div.checkoutcontainer div.input-postcode {
+    width: 100%;
+    float: none;
+  }
+  #onestepcheckout-form div.checkoutcontainer div.input-address-short .input-text,
+  #onestepcheckout-form div.checkoutcontainer div.input-firstname .input-text,
+  #onestepcheckout-form div.checkoutcontainer div.input-lastname .input-text,
+  #onestepcheckout-form div.checkoutcontainer div.input-email .input-text,
+  #onestepcheckout-form div.checkoutcontainer div.input-telephone .input-text,
+  #onestepcheckout-form div.checkoutcontainer div.input-company .input-text,
+  #onestepcheckout-form div.checkoutcontainer div.input-fax .input-text,
+  #onestepcheckout-form div.checkoutcontainer div.input-password .input-text {
+    width: 100%;
+  }
+  #onestepcheckout-form div.checkoutcontainer div.input-region select {
+    width: 100% !important;
+  }
+  #onestepcheckout-form div.checkoutcontainer div.input-region {
+    width: 100%;
+  }
+}

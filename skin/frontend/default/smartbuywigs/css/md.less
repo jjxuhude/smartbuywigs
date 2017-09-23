@@ -1349,4 +1349,92 @@ p.increment_id {
   margin: 0;
   font-size: 60px;
 }
+//一步支付
+//一步支付
+@media screen and (min-width: 992px) {
+  #onestepcheckout-login-popup p.close, #onestepcheckout-toc-popup p.close {
+    bottom: 10px;
+  }
+  .validation-advice {
+    color: red
+  }
 
+  button#onestepcheckout-place-order {
+    background: @cart-btn-bg !important;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    text-align: center;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .orange.onestepcheckout-button, .orange.onestepcheckout-button:visited {
+    background: @cart-btn-bg !important;
+  }
+
+  #onestepcheckout-form {
+    .group-select {
+      > h1 {
+      }
+      > p {
+      }
+      > .onestepcheckout-threecolumns {
+        display: flex;
+        flex-direction: column;
+        select {
+          width: 100%;
+        }
+        .input-address input, .input-city input, .input-postcode input {
+          width: 100%
+        }
+        .onestepcheckout-column-left {
+          border: none;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          background-image: none
+        }
+        .onestepcheckout-column-middle {
+          border: none;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          background-image: none
+        }
+        .onestepcheckout-column-right {
+          border: none;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          background-image: none
+        }
+
+      }
+
+    }
+    div.checkoutcontainer div.input-address-short, div.checkoutcontainer div.input-firstname, div.checkoutcontainer div.input-lastname, div.checkoutcontainer div.input-email, div.checkoutcontainer div.input-telephone, div.checkoutcontainer div.input-company, div.checkoutcontainer div.input-fax, div.checkoutcontainer div.input-password {
+      width: 100%;
+      float: none;
+    }
+    div.checkoutcontainer div.input-postcode {
+      width: 100%;
+      float: none;
+    }
+    div.checkoutcontainer div.input-address-short .input-text, div.checkoutcontainer div.input-firstname .input-text, div.checkoutcontainer div.input-lastname .input-text, div.checkoutcontainer div.input-email .input-text, div.checkoutcontainer div.input-telephone .input-text, div.checkoutcontainer div.input-company .input-text, div.checkoutcontainer div.input-fax .input-text, div.checkoutcontainer div.input-password .input-text {
+      width: 100%;
+    }
+    div.checkoutcontainer div.input-region select {
+      width: 100% !important;
+    }
+    div.checkoutcontainer div.input-region {
+      width: 100%;
+    }
+
+  }
+
+}
