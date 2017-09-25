@@ -900,6 +900,9 @@ ul.messages > li.note-msg::before {
   width: 100%;
   display: inline-block;
 }
+.product-view .product-essential form .product-shop .add-to-box .paypal-logo img {
+  height: 32px;
+}
 .product-view .product-essential form .product-shop .add-to-box #product-addtocart-button {
   background: #079CB4;
   color: #fff;
@@ -989,6 +992,9 @@ ul.messages > li.note-msg::before {
   top: 16px;
 }
 @media screen and (max-width: 992px) {
+  .cart .paypal-logo img {
+    height: 40px;
+  }
   .cart button {
     border-radius: 5px;
   }

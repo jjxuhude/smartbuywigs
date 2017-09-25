@@ -93,7 +93,11 @@
         <div class="container">
             <div class="row">
                 <div class="btns">
+                    <?php if(!in_array($this->getAction()->getFullActionName(),['checkout_cart_index','onestepcheckout_index_index'])):?>
                     <div class="menu iconfont icon-menu icon-menu col-xs-2 hidden-lg hidden-md"></div>
+                    <?php else:?>
+                        <div class=" col-xs-2 hidden-lg hidden-md"></div>
+                    <?php endif;?>
                     <div class="logo col-xs-8 col-sm-8 col-md-4 text-center"><a href="<?php echo $this->getUrl()?>">smartbuywigs</a></div>
                     <div class="search search2 col-md-4 hidden-xs hidden-sm" style="border: none;">
                         <form id="search_mini_form2" action="<?php echo $this->getUrl('catalogsearch/result')?>" method="get" _lpchecked="1">
