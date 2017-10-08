@@ -32,8 +32,8 @@
 ?>
 <?php $_description = $this->getProduct()->getDescription(); ?>
 <?php if ($_description): ?>
-    <h2><?php echo $this->__('Details') ?> <i class="iconfont icon-div"></i></h2>
-    <div class="std">
+    <h2><span class="active"><?php echo $this->__('Details') ?></span> <i class="iconfont icon-div"></i></h2>
+    <div class="std ">
         <?php echo $this->helper('catalog/output')->productAttribute($this->getProduct(), $_description, 'description') ?>
     </div>
 <?php endif; ?>

@@ -270,3 +270,22 @@ ul.messages > li.note-msg::before,
 ul.messages > li.note-msg::before {
   content: "\e676";
 }
+.price-box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+.price-box .price-label {
+  display: none;
+}
+.price-box .old-price {
+  margin-left: 10px;
+}
+.price-box .old-price span {
+  font-size: 18px;
+}
+.price-box .special-price span {
+  text-decoration: line-through;
+  color: #ccc;
+}

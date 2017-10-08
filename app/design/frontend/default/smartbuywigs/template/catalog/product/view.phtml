@@ -184,7 +184,7 @@
 
     <div class="product-collateral container">
 
-        <div class="box-left">
+
             <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
                 <?php if($alias ==  'description'):?>
                 <div class="box-collateral <?php echo "box-{$alias}"?>">
@@ -195,8 +195,6 @@
                 </div>
                 <?php endif;?>
             <?php endforeach;?>
-        </div>
-        <div class="box-right">
             <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
                 <?php if($alias !=  'description'):?>
                     <div class="box-collateral <?php echo "box-{$alias}"?>">
@@ -207,7 +205,6 @@
                     </div>
                 <?php endif;?>
             <?php endforeach;?>
-        </div>
 
     </div>
     <?php echo $this->getChildHtml('upsell_products') ?>
@@ -224,8 +221,15 @@
 			    $(this).removeClass('icon-div').addClass('icon-add');
 	    });
 	    $('.box-collateral').on('click','.icon-add',function(){
-			    $(this).closest('.box-collateral').find('.std').removeClass('hidden');
-			    $(this).removeClass('icon-add').addClass('icon-div');
+			 //   $(this).closest('.box-collateral').find('.std').removeClass('hidden');
+			 //   $(this).removeClass('icon-add').addClass('icon-div');
+	    });
+	    $('.box-collateral').on('click','h2',function(){
+		    $('.product-collateral').find('.std').addClass('hidden');
+		    $('.product-collateral').find('h2>span').removeClass('active');
+		    $(this).closest('.box-collateral').find('.std').removeClass('hidden');
+		    $(this).closest('.box-collateral').find('h2>span').addClass('active');
+
 	    });
     })(jQuery);
 </script>

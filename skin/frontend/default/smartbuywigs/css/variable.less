@@ -307,3 +307,27 @@ ul.messages > li.note-msg, ul.messages > li.note-msg {
     content: "\e676";
   }
 }
+
+//价格标签
+.price-box{
+  .price-label{display: none;}
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+  .old-price{
+    margin-left: 10px;
+    span{
+      font-size: 18px;
+    }
+  }
+  .special-price{
+    span{
+
+      text-decoration: line-through;
+      color: #ccc;
+    }
+  }
+
+}
+
